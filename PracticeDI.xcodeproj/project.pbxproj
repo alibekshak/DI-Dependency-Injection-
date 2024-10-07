@@ -16,6 +16,7 @@
 		18DF136E2CB3BC7A00FDB064 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 18DF136D2CB3BC7A00FDB064 /* Swinject */; };
 		18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */; };
 		18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13772CB3C3FB00FDB064 /* MainView.swift */; };
+		18DF137B2CB3D0FB00FDB064 /* TargetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF137A2CB3D0FB00FDB064 /* TargetService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		18DF136A2CB3BC1400FDB064 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		18DF13772CB3C3FB00FDB064 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		18DF137A2CB3D0FB00FDB064 /* TargetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		18DF13612CB3B96900FDB064 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				18DF13792CB3D0EA00FDB064 /* Network */,
 				18DF13692CB3BBF800FDB064 /* Dependency */,
 				18DF13632CB3B99800FDB064 /* Coodinator */,
 				18DF13622CB3B98100FDB064 /* Enviroment */,
@@ -151,6 +154,14 @@
 				18DF13772CB3C3FB00FDB064 /* MainView.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		18DF13792CB3D0EA00FDB064 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				18DF137A2CB3D0FB00FDB064 /* TargetService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
 				18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */,
 				18DF13562CB3B93C00FDB064 /* ContentView.swift in Sources */,
+				18DF137B2CB3D0FB00FDB064 /* TargetService.swift in Sources */,
 				18DF13542CB3B93C00FDB064 /* PracticeDIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
