@@ -18,6 +18,9 @@ class DependencyManager {
     }
     
     private func setupDependencies() {
+        container.register(AppCoordinator.self) { _ in
+            AppCoordinator()
+        }.inObjectScope(.container)
         
     }
 

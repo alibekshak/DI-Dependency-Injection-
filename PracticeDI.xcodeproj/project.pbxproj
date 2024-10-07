@@ -15,6 +15,7 @@
 		18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF136A2CB3BC1400FDB064 /* DependencyManager.swift */; };
 		18DF136E2CB3BC7A00FDB064 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 18DF136D2CB3BC7A00FDB064 /* Swinject */; };
 		18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */; };
+		18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13772CB3C3FB00FDB064 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		18DF13672CB3BB6100FDB064 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		18DF136A2CB3BC1400FDB064 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		18DF13772CB3C3FB00FDB064 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		18DF13642CB3B9A600FDB064 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18DF13762CB3C3ED00FDB064 /* MainView */,
 				18DF13712CB3BD7100FDB064 /* LaunchScreen */,
 			);
 			path = View;
@@ -140,6 +143,14 @@
 				18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		18DF13762CB3C3ED00FDB064 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				18DF13772CB3C3FB00FDB064 /* MainView.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */,
+				18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */,
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
 				18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */,
 				18DF13562CB3B93C00FDB064 /* ContentView.swift in Sources */,

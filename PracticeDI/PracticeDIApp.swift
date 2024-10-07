@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct PracticeDIApp: App {
+    
+    @State var isAppLoaded: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if let appCoordinator = DependencyManager.shared.resolve(AppCoordinator.self) {
+                MainView()
+                    .environmentObject(appCoordinator)
+            } else {
+                Text("Failed to resolve coordinator")
+            }
         }
     }
 }

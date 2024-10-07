@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LaunchScreen: View {
     
+    @EnvironmentObject var appCoordinator: AppCoordinator
+    
     @State private var isAnimating = false
     
     var body: some View {
@@ -24,6 +26,11 @@ struct LaunchScreen: View {
         .ignoresSafeArea()
         .onAppear {
             self.isAnimating = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                withAnimation {
+                    appCoordinator.navigateToMain()
+                }
+            }
         }
     }
 }
