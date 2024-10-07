@@ -12,6 +12,9 @@
 		18DF13582CB3B93E00FDB064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF13572CB3B93E00FDB064 /* Assets.xcassets */; };
 		18DF135B2CB3B93E00FDB064 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF135A2CB3B93E00FDB064 /* Preview Assets.xcassets */; };
 		18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13672CB3BB6100FDB064 /* AppCoordinator.swift */; };
+		18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF136A2CB3BC1400FDB064 /* DependencyManager.swift */; };
+		18DF136E2CB3BC7A00FDB064 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 18DF136D2CB3BC7A00FDB064 /* Swinject */; };
+		18DF13702CB3BC7A00FDB064 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 18DF136F2CB3BC7A00FDB064 /* Swinject-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,7 @@
 		18DF13572CB3B93E00FDB064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18DF135A2CB3B93E00FDB064 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18DF13672CB3BB6100FDB064 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		18DF136A2CB3BC1400FDB064 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DF136E2CB3BC7A00FDB064 /* Swinject in Frameworks */,
+				18DF13702CB3BC7A00FDB064 /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,7 @@
 		18DF13612CB3B96900FDB064 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				18DF13692CB3BBF800FDB064 /* Dependency */,
 				18DF13632CB3B99800FDB064 /* Coodinator */,
 				18DF13622CB3B98100FDB064 /* Enviroment */,
 			);
@@ -118,6 +125,14 @@
 			path = "Model ";
 			sourceTree = "<group>";
 		};
+		18DF13692CB3BBF800FDB064 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				18DF136A2CB3BC1400FDB064 /* DependencyManager.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +149,10 @@
 			dependencies = (
 			);
 			name = PracticeDI;
+			packageProductDependencies = (
+				18DF136D2CB3BC7A00FDB064 /* Swinject */,
+				18DF136F2CB3BC7A00FDB064 /* Swinject-Dynamic */,
+			);
 			productName = PracticeDI;
 			productReference = 18DF13502CB3B93C00FDB064 /* PracticeDI.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +181,9 @@
 				Base,
 			);
 			mainGroup = 18DF13472CB3B93C00FDB064;
+			packageReferences = (
+				18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 18DF13512CB3B93C00FDB064 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */,
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
 				18DF13562CB3B93C00FDB064 /* ContentView.swift in Sources */,
 				18DF13542CB3B93C00FDB064 /* PracticeDIApp.swift in Sources */,
@@ -396,6 +419,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18DF136D2CB3BC7A00FDB064 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		18DF136F2CB3BC7A00FDB064 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18DF13482CB3B93C00FDB064 /* Project object */;
 }
