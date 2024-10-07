@@ -17,6 +17,10 @@
 		18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */; };
 		18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13772CB3C3FB00FDB064 /* MainView.swift */; };
 		18DF137B2CB3D0FB00FDB064 /* TargetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF137A2CB3D0FB00FDB064 /* TargetService.swift */; };
+		18DF137D2CB3D97000FDB064 /* ResponseCompanies .swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF137C2CB3D97000FDB064 /* ResponseCompanies .swift */; };
+		18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF137E2CB3D99800FDB064 /* UserData.swift */; };
+		18DF13812CB3D9AE00FDB064 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13802CB3D9AE00FDB064 /* Address.swift */; };
+		18DF13832CB3D9C100FDB064 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13822CB3D9C100FDB064 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		18DF13772CB3C3FB00FDB064 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		18DF137A2CB3D0FB00FDB064 /* TargetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetService.swift; sourceTree = "<group>"; };
+		18DF137C2CB3D97000FDB064 /* ResponseCompanies .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseCompanies .swift"; sourceTree = "<group>"; };
+		18DF137E2CB3D99800FDB064 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		18DF13802CB3D9AE00FDB064 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		18DF13822CB3D9C100FDB064 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,10 @@
 		18DF13662CB3B9B500FDB064 /* Model  */ = {
 			isa = PBXGroup;
 			children = (
+				18DF137C2CB3D97000FDB064 /* ResponseCompanies .swift */,
+				18DF137E2CB3D99800FDB064 /* UserData.swift */,
+				18DF13802CB3D9AE00FDB064 /* Address.swift */,
+				18DF13822CB3D9C100FDB064 /* Contact.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -241,8 +253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */,
+				18DF137D2CB3D97000FDB064 /* ResponseCompanies .swift in Sources */,
 				18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */,
+				18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */,
+				18DF13812CB3D9AE00FDB064 /* Address.swift in Sources */,
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
+				18DF13832CB3D9C100FDB064 /* Contact.swift in Sources */,
 				18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */,
 				18DF13562CB3B93C00FDB064 /* ContentView.swift in Sources */,
 				18DF137B2CB3D0FB00FDB064 /* TargetService.swift in Sources */,
