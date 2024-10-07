@@ -14,7 +14,7 @@
 		18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13672CB3BB6100FDB064 /* AppCoordinator.swift */; };
 		18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF136A2CB3BC1400FDB064 /* DependencyManager.swift */; };
 		18DF136E2CB3BC7A00FDB064 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 18DF136D2CB3BC7A00FDB064 /* Swinject */; };
-		18DF13702CB3BC7A00FDB064 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 18DF136F2CB3BC7A00FDB064 /* Swinject-Dynamic */; };
+		18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +25,7 @@
 		18DF135A2CB3B93E00FDB064 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18DF13672CB3BB6100FDB064 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		18DF136A2CB3BC1400FDB064 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +34,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DF136E2CB3BC7A00FDB064 /* Swinject in Frameworks */,
-				18DF13702CB3BC7A00FDB064 /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +107,7 @@
 		18DF13642CB3B9A600FDB064 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18DF13712CB3BD7100FDB064 /* LaunchScreen */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +134,14 @@
 			path = Dependency;
 			sourceTree = "<group>";
 		};
+		18DF13712CB3BD7100FDB064 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,7 +160,6 @@
 			name = PracticeDI;
 			packageProductDependencies = (
 				18DF136D2CB3BC7A00FDB064 /* Swinject */,
-				18DF136F2CB3BC7A00FDB064 /* Swinject-Dynamic */,
 			);
 			productName = PracticeDI;
 			productReference = 18DF13502CB3B93C00FDB064 /* PracticeDI.app */;
@@ -212,6 +220,7 @@
 			files = (
 				18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */,
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
+				18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */,
 				18DF13562CB3B93C00FDB064 /* ContentView.swift in Sources */,
 				18DF13542CB3B93C00FDB064 /* PracticeDIApp.swift in Sources */,
 			);
@@ -436,11 +445,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		18DF136F2CB3BC7A00FDB064 /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
