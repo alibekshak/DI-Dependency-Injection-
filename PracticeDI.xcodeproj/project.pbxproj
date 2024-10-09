@@ -225,6 +225,7 @@
 			mainGroup = 18DF13472CB3B93C00FDB064;
 			packageReferences = (
 				18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */,
+				18D585FF2CB698B40039A0B5 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 18DF13512CB3B93C00FDB064 /* Products */;
 			projectDirPath = "";
@@ -470,6 +471,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		18D585FF2CB698B40039A0B5 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 		18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
