@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18C25CDF2CB93A9100FF4D82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */; };
+		18C25CE22CB93F0B00FF4D82 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 18C25CE12CB93F0B00FF4D82 /* Moya */; };
 		18DF13542CB3B93C00FDB064 /* PracticeDIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13532CB3B93C00FDB064 /* PracticeDIApp.swift */; };
 		18DF13562CB3B93C00FDB064 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13552CB3B93C00FDB064 /* ContentView.swift */; };
 		18DF13582CB3B93E00FDB064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF13572CB3B93E00FDB064 /* Assets.xcassets */; };
@@ -16,9 +18,15 @@
 		18DF136E2CB3BC7A00FDB064 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 18DF136D2CB3BC7A00FDB064 /* Swinject */; };
 		18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */; };
 		18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13772CB3C3FB00FDB064 /* MainView.swift */; };
+		18DF137B2CB3D0FB00FDB064 /* TargetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF137A2CB3D0FB00FDB064 /* TargetService.swift */; };
+		18DF137D2CB3D97000FDB064 /* ResponseCompanies .swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF137C2CB3D97000FDB064 /* ResponseCompanies .swift */; };
+		18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF137E2CB3D99800FDB064 /* UserData.swift */; };
+		18DF13812CB3D9AE00FDB064 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13802CB3D9AE00FDB064 /* Address.swift */; };
+		18DF13832CB3D9C100FDB064 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13822CB3D9C100FDB064 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		18DF13502CB3B93C00FDB064 /* PracticeDI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeDI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DF13532CB3B93C00FDB064 /* PracticeDIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDIApp.swift; sourceTree = "<group>"; };
 		18DF13552CB3B93C00FDB064 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +36,11 @@
 		18DF136A2CB3BC1400FDB064 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		18DF13742CB3BDB100FDB064 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		18DF13772CB3C3FB00FDB064 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		18DF137A2CB3D0FB00FDB064 /* TargetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetService.swift; sourceTree = "<group>"; };
+		18DF137C2CB3D97000FDB064 /* ResponseCompanies .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseCompanies .swift"; sourceTree = "<group>"; };
+		18DF137E2CB3D99800FDB064 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		18DF13802CB3D9AE00FDB064 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		18DF13822CB3D9C100FDB064 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C25CE22CB93F0B00FF4D82 /* Moya in Frameworks */,
 				18DF136E2CB3BC7A00FDB064 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,11 +56,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18C25CE02CB93F0B00FF4D82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		18DF13472CB3B93C00FDB064 = {
 			isa = PBXGroup;
 			children = (
 				18DF13522CB3B93C00FDB064 /* PracticeDI */,
 				18DF13512CB3B93C00FDB064 /* Products */,
+				18C25CE02CB93F0B00FF4D82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +106,7 @@
 		18DF13612CB3B96900FDB064 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				18DF13792CB3D0EA00FDB064 /* Network */,
 				18DF13692CB3BBF800FDB064 /* Dependency */,
 				18DF13632CB3B99800FDB064 /* Coodinator */,
 				18DF13622CB3B98100FDB064 /* Enviroment */,
@@ -125,6 +148,10 @@
 		18DF13662CB3B9B500FDB064 /* Model  */ = {
 			isa = PBXGroup;
 			children = (
+				18DF137C2CB3D97000FDB064 /* ResponseCompanies .swift */,
+				18DF137E2CB3D99800FDB064 /* UserData.swift */,
+				18DF13802CB3D9AE00FDB064 /* Address.swift */,
+				18DF13822CB3D9C100FDB064 /* Contact.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -153,6 +180,15 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
+		18DF13792CB3D0EA00FDB064 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				18DF137A2CB3D0FB00FDB064 /* TargetService.swift */,
+				18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,6 +207,7 @@
 			name = PracticeDI;
 			packageProductDependencies = (
 				18DF136D2CB3BC7A00FDB064 /* Swinject */,
+				18C25CE12CB93F0B00FF4D82 /* Moya */,
 			);
 			productName = PracticeDI;
 			productReference = 18DF13502CB3B93C00FDB064 /* PracticeDI.app */;
@@ -202,6 +239,7 @@
 			mainGroup = 18DF13472CB3B93C00FDB064;
 			packageReferences = (
 				18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */,
+				18D585FF2CB698B40039A0B5 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 18DF13512CB3B93C00FDB064 /* Products */;
 			projectDirPath = "";
@@ -229,11 +267,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C25CDF2CB93A9100FF4D82 /* NetworkManager.swift in Sources */,
 				18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */,
+				18DF137D2CB3D97000FDB064 /* ResponseCompanies .swift in Sources */,
 				18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */,
+				18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */,
+				18DF13812CB3D9AE00FDB064 /* Address.swift in Sources */,
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
+				18DF13832CB3D9C100FDB064 /* Contact.swift in Sources */,
 				18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */,
 				18DF13562CB3B93C00FDB064 /* ContentView.swift in Sources */,
+				18DF137B2CB3D0FB00FDB064 /* TargetService.swift in Sources */,
 				18DF13542CB3B93C00FDB064 /* PracticeDIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +486,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		18D585FF2CB698B40039A0B5 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 		18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -453,6 +505,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		18C25CE12CB93F0B00FF4D82 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18D585FF2CB698B40039A0B5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		18DF136D2CB3BC7A00FDB064 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */;

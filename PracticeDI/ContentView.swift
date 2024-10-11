@@ -16,6 +16,17 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            let networkManager = NetworkManager()
+            networkManager.getCompanyInfo(quantity: 10) {  result in
+                switch result {
+                case .success(let response):
+                    print("Success: \(response)")
+                case .failure(let error):
+                    print("Error: \(error)")
+                }
+            }
+        }
     }
 }
 
