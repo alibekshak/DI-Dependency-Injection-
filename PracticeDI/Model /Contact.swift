@@ -9,13 +9,13 @@ import Foundation
 
 struct Contact: Codable {
     let id: Int
-    let firstname: String
-    let lastname: String
-    let email: String
-    let phone: String
-    let birthday: String
-    let gender: String
+    let firstname: String?
+    let lastname: String?
+    let email: String?
+    let phone: String?
+    let birthday: String?
+    let gender: String?
     let address: Address
-    let website: String
-    let image: String
+    let website: String?
+    let image: String?
 }

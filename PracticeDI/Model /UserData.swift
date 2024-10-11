@@ -9,14 +9,14 @@ import Foundation
 
 struct UserData: Codable {
     let id: Int
-    let name: String
-    let email: String
-    let vat: String
-    let phone: String
-    let country: String
+    let name: String?
+    let email: String?
+    let vat: String?
+    let phone: String?
+    let country: String?
     let addresses: [Address]
-    let website: String
-    let image: String
+    let website: String?
+    let image: String?
     let contact: Contact
 }
 
