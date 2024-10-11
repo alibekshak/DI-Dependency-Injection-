@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18C25CDF2CB93A9100FF4D82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */; };
 		18DF13542CB3B93C00FDB064 /* PracticeDIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13532CB3B93C00FDB064 /* PracticeDIApp.swift */; };
 		18DF13562CB3B93C00FDB064 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13552CB3B93C00FDB064 /* ContentView.swift */; };
 		18DF13582CB3B93E00FDB064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF13572CB3B93E00FDB064 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		18DF13502CB3B93C00FDB064 /* PracticeDI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeDI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DF13532CB3B93C00FDB064 /* PracticeDIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDIApp.swift; sourceTree = "<group>"; };
 		18DF13552CB3B93C00FDB064 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				18DF137A2CB3D0FB00FDB064 /* TargetService.swift */,
+				18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C25CDF2CB93A9100FF4D82 /* NetworkManager.swift in Sources */,
 				18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */,
 				18DF137D2CB3D97000FDB064 /* ResponseCompanies .swift in Sources */,
 				18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */,
