@@ -22,6 +22,15 @@ class DependencyManager {
             AppCoordinator()
         }.inObjectScope(.container)
         
+        
+       // Showing error
+        container.register(MainContentViewModel.self) { resolver in
+            guard let networkManager = resolver.resolve(NetworkManager.self),
+                  let coordinator = resolver.resolve(AppCoordinator.self) else {
+                fatalError("Unable to resolve dependencies for MainContentViewModel")
+            }
+            return MainContentViewModel(networkManager: networkManager, coordinator: coordinator)
+        }
     }
 
     func resolve<Service>(_ serviceType: Service.Type) -> Service? {
