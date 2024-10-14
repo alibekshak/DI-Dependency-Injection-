@@ -14,39 +14,24 @@ struct InfoCard: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: .zero) {
-            if let imageUrl = info.image, let url = URL(string: imageUrl) {
-                KFImage(url)
-                    .setProcessor(DownsamplingImageProcessor(size: CGSize(width: 200, height: 200)))
-                    .placeholder {
-                        ProgressView()
-                    }
-                    .cacheOriginalImage()
-                    .onSuccess { result in
-                        print("Изображение успешно загружено: \(result)")
-                    }
-                    .onFailure { error in
-                        print("Ошибка загрузки изображения: \(error)")
-                    }
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 200, height: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
-            } else {
-                Image(systemName: "photo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 200, height: 200)
-                    .foregroundColor(.gray)
-            }
-            
+            image
             companyInfo
         }
         .padding(.horizontal, 12)
         .padding(.bottom, 12)
-        .frame(width: 200)
+        .frame(width: 200, height: 300)
         .background(Color.white)
         .cornerRadius(16)
         .foregroundColor(.black)
+    }
+    
+    var image: some View {
+        Image(systemName: "photo")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(maxWidth: 128, maxHeight: 129)
+            .foregroundColor(.gray)
+        
     }
     
     var companyInfo: some View {
