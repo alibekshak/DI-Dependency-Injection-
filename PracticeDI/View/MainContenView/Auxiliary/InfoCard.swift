@@ -13,16 +13,18 @@ struct InfoCard: View {
     var info: UserData
     
     var body: some View {
-        VStack(alignment: .leading, spacing: .zero) {
+        VStack(alignment: .center, spacing: 8) {
             image
             companyInfo
         }
+        .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+        .padding(.vertical, 8)
         .padding(.horizontal, 12)
-        .padding(.bottom, 12)
-        .frame(width: 200, height: 300)
+        .frame(maxWidth: 160, alignment: .center)
         .background(Color.white)
         .cornerRadius(16)
         .foregroundColor(.black)
+        //        .shadow(radius: 4)
     }
     
     var image: some View {
@@ -31,28 +33,19 @@ struct InfoCard: View {
             .aspectRatio(contentMode: .fit)
             .frame(maxWidth: 128, maxHeight: 129)
             .foregroundColor(.gray)
-        
     }
     
     var companyInfo: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            if let companyName = info.name {
-                Text(companyName)
-                    .multilineTextAlignment(.leading)
-                    .font(.system(size: 16, weight: .semibold))
-            } else {
-                Text("No company name")
-            }
-            
-            if let country = info.country {
-                Text(country)
-            } else {
-                Text("No info country")
-            }
+        Group {
+            Text( info.name ?? "")
+                .multilineTextAlignment(.center)
+                .font(.system(size: 14, weight: .semibold))
+                .lineLimit(2)
+            Text( info.country ?? "")
         }
+        .lineLimit(1)
         .font(.system(size: 12, weight: .semibold))
         .foregroundColor(Color(.systemGray2))
-        .padding(.horizontal)
     }
 }
 

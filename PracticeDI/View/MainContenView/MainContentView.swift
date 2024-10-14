@@ -22,15 +22,14 @@ struct MainContentView: View {
     var body: some View {
         VStack(spacing: .zero) {
             ScrollView(showsIndicators: false) {
-                LazyVGrid(columns: colums, spacing: 12) {
+                LazyVGrid(columns: colums, spacing: 8) {
                     ForEach(viewModel.companyInfo, id: \.id) { info in
                       InfoCard(info: info)
-                            .padding(.horizontal)
                     }
-                    .padding(.horizontal, 24)
                 }
             }
         }
+        .padding(.horizontal, 12)
         .onAppear {
             viewModel.getCompanyInfo()
         }
