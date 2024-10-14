@@ -28,7 +28,7 @@ struct LaunchScreen: View {
             self.isAnimating = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 withAnimation {
-                    appCoordinator.navigateToMain()
+                    appCoordinator.navigateToMainConten()
                 }
             }
         }

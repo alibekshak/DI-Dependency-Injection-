@@ -15,9 +15,9 @@ class AppCoordinator: ObservableObject {
         naviageToLaunchScreen()
     }
     
-    func navigateToMain() {
+    func navigateToMainConten() {
         self.viewStack.removeAll()
-        navigate(to: ContentView())
+        navigate(to: MainContentView())
     }
     
     func naviageToLaunchScreen() {
