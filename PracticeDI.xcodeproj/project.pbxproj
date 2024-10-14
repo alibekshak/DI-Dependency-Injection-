@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187E99ED2CBCD21B0097CF97 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99EC2CBCD21B0097CF97 /* InfoCard.swift */; };
+		187E99F02CBCD2BB0097CF97 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 187E99EF2CBCD2BB0097CF97 /* Kingfisher */; };
 		18C25CDF2CB93A9100FF4D82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */; };
 		18C25CE22CB93F0B00FF4D82 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 18C25CE12CB93F0B00FF4D82 /* Moya */; };
 		18C25CE42CBBE93900FF4D82 /* MainContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C25CE32CBBE93900FF4D82 /* MainContentViewModel.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187E99EC2CBCD21B0097CF97 /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
+		187E99F12CBCDA8B0097CF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		18C25CE32CBBE93900FF4D82 /* MainContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentViewModel.swift; sourceTree = "<group>"; };
 		18C25CE52CBBEB8700FF4D82 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187E99F02CBCD2BB0097CF97 /* Kingfisher in Frameworks */,
 				18C25CE22CB93F0B00FF4D82 /* Moya in Frameworks */,
 				18DF136E2CB3BC7A00FDB064 /* Swinject in Frameworks */,
 			);
@@ -58,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187E99EB2CBCD1F90097CF97 /* Auxiliary */ = {
+			isa = PBXGroup;
+			children = (
+				187E99EC2CBCD21B0097CF97 /* InfoCard.swift */,
+			);
+			path = Auxiliary;
+			sourceTree = "<group>";
+		};
 		18C25CE02CB93F0B00FF4D82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +81,7 @@
 		18C25CE92CBCCB6C00FF4D82 /* MainContenView */ = {
 			isa = PBXGroup;
 			children = (
+				187E99EB2CBCD1F90097CF97 /* Auxiliary */,
 				18C25CE52CBBEB8700FF4D82 /* MainContentView.swift */,
 			);
 			path = MainContenView;
@@ -93,6 +107,7 @@
 		18DF13522CB3B93C00FDB064 /* PracticeDI */ = {
 			isa = PBXGroup;
 			children = (
+				187E99F12CBCDA8B0097CF97 /* Info.plist */,
 				18DF13662CB3B9B500FDB064 /* Model  */,
 				18DF13652CB3B9AE00FDB064 /* ViewModel */,
 				18DF13642CB3B9A600FDB064 /* View */,
@@ -211,6 +226,7 @@
 			packageProductDependencies = (
 				18DF136D2CB3BC7A00FDB064 /* Swinject */,
 				18C25CE12CB93F0B00FF4D82 /* Moya */,
+				187E99EF2CBCD2BB0097CF97 /* Kingfisher */,
 			);
 			productName = PracticeDI;
 			productReference = 18DF13502CB3B93C00FDB064 /* PracticeDI.app */;
@@ -243,6 +259,7 @@
 			packageReferences = (
 				18DF136C2CB3BC7A00FDB064 /* XCRemoteSwiftPackageReference "Swinject" */,
 				18D585FF2CB698B40039A0B5 /* XCRemoteSwiftPackageReference "Moya" */,
+				187E99EE2CBCD2BB0097CF97 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 18DF13512CB3B93C00FDB064 /* Products */;
 			projectDirPath = "";
@@ -275,6 +292,7 @@
 				18DF137D2CB3D97000FDB064 /* ResponseCompanies .swift in Sources */,
 				18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */,
 				18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */,
+				187E99ED2CBCD21B0097CF97 /* InfoCard.swift in Sources */,
 				18DF13812CB3D9AE00FDB064 /* Address.swift in Sources */,
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
 				18DF13832CB3D9C100FDB064 /* Contact.swift in Sources */,
@@ -419,6 +437,7 @@
 				DEVELOPMENT_TEAM = P5JPX93769;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PracticeDI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,6 +467,7 @@
 				DEVELOPMENT_TEAM = P5JPX93769;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PracticeDI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -490,6 +510,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		187E99EE2CBCD2BB0097CF97 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
 		18D585FF2CB698B40039A0B5 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -509,6 +537,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		187E99EF2CBCD2BB0097CF97 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 187E99EE2CBCD2BB0097CF97 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		18C25CE12CB93F0B00FF4D82 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 18D585FF2CB698B40039A0B5 /* XCRemoteSwiftPackageReference "Moya" */;

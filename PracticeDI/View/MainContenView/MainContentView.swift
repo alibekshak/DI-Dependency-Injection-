@@ -20,12 +20,9 @@ struct MainContentView: View {
     var body: some View {
         VStack(spacing: .zero) {
             ScrollView {
-                VStack {
+                VStack(spacing: 12) {
                     ForEach(viewModel.companyInfo, id: \.id) { info in
-                        Text(info.name ?? "")
-                            .font(.title)
-                        Text(info.email ?? "")
-                            .font(.caption)
+                      InfoCard(info: info)
                     }
                 }
             }
