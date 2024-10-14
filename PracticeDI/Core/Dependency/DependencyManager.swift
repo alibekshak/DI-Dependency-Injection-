@@ -23,7 +23,10 @@ class DependencyManager {
         }.inObjectScope(.container)
         
         
-       // Showing error
+        container.register(NetworkManager.self) { _ in
+            NetworkManager()
+        }.inObjectScope(.container)
+        
         container.register(MainContentViewModel.self) { resolver in
             guard let networkManager = resolver.resolve(NetworkManager.self),
                   let coordinator = resolver.resolve(AppCoordinator.self) else {
