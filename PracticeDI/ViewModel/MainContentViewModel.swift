@@ -1,5 +1,5 @@
 //
-//  MainContentView .swift
+//  MainContentViewModel .swift
 //  PracticeDI
 //
 //  Created by Alibek Shakirov on 13.10.2024.

@@ -13,7 +13,7 @@ struct MainContentView: View {
         if let viewModel = DependencyManager.shared.resolve(MainContentViewModel.self) {
             return viewModel
         } else {
-            fatalError("MainPageViewModel could not be resolved.")
+            fatalError("MainContentViewModel could not be resolved.")
         }
     }()
     
