@@ -13,18 +13,22 @@ struct InfoCard: View {
     var info: UserData
     
     var body: some View {
-        VStack(alignment: .center, spacing: 8) {
-            image
-            companyInfo
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 12) {
+                image
+                companyInfo
+            }
+            Text( info.email ?? "")
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(Color(.systemGray2))
         }
         .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
         .padding(.vertical, 8)
         .padding(.horizontal, 12)
-        .frame(maxWidth: 160, alignment: .center)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color.white)
         .cornerRadius(16)
         .foregroundColor(.black)
-        //        .shadow(radius: 4)
     }
     
     var image: some View {
@@ -36,16 +40,15 @@ struct InfoCard: View {
     }
     
     var companyInfo: some View {
-        Group {
+        VStack(alignment: .leading, spacing: 6) {
             Text( info.name ?? "")
-                .multilineTextAlignment(.center)
-                .font(.system(size: 14, weight: .semibold))
-                .lineLimit(2)
-            Text( info.country ?? "")
+                .multilineTextAlignment(.leading)
+                .font(.system(size: 14, weight: .bold))
+            Text(info.phone ?? "")
+            Text(info.country ?? "")
         }
-        .lineLimit(1)
         .font(.system(size: 12, weight: .semibold))
-        .foregroundColor(Color(.systemGray2))
+        .foregroundColor(Color(.black))
     }
 }
 

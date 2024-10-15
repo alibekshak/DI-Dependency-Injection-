@@ -17,16 +17,17 @@ struct MainContentView: View {
         }
     }()
     
-    let colums = Array(repeating: GridItem(.flexible()), count: 2)
+    let colums = Array(repeating: GridItem(.flexible(), spacing: .zero, alignment: .top), count: 1)
     
     var body: some View {
         VStack(spacing: .zero) {
             ScrollView(showsIndicators: false) {
-                LazyVGrid(columns: colums, spacing: 8) {
+                LazyVGrid(columns: colums, alignment: .center, spacing: 8) {
                     ForEach(viewModel.companyInfo, id: \.id) { info in
                       InfoCard(info: info)
                     }
                 }
+                .padding(.horizontal)
             }
         }
         .padding(.horizontal, 12)
