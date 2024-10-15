@@ -20,6 +20,10 @@ class AppCoordinator: ObservableObject {
         navigate(to: MainContentView())
     }
     
+    func navigateToInfoAddresses(addresses: [Address]) {
+        navigate(to: InfoAddressesView(addresses: addresses))
+    }
+    
     func naviageToLaunchScreen() {
         navigate(to: LaunchScreen())
     }

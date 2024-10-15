@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainContentView: View {
     
+    @EnvironmentObject var coordinator: AppCoordinator
+    
     @StateObject var viewModel: MainContentViewModel = {
         if let viewModel = DependencyManager.shared.resolve(MainContentViewModel.self) {
             return viewModel
@@ -17,26 +19,26 @@ struct MainContentView: View {
         }
     }()
     
+    let colums = Array(repeating: GridItem(.flexible(), spacing: .zero, alignment: .top), count: 1)
+    
     var body: some View {
         VStack(spacing: .zero) {
-            ScrollView {
-                VStack {
+            ScrollView(showsIndicators: false) {
+                LazyVGrid(columns: colums, alignment: .center, spacing: 8) {
                     ForEach(viewModel.companyInfo, id: \.id) { info in
-                        Text(info.name ?? "")
-                            .font(.title)
-                        Text(info.email ?? "")
-                            .font(.caption)
+                        InfoCard(info: info)
+                            .onTapGesture {
+                                withAnimation {
+                                    coordinator.navigateToInfoAddresses(addresses: info.addresses)
+                                }
+                            }
                     }
                 }
             }
         }
+        .padding(.horizontal, 12)
         .onAppear {
             viewModel.getCompanyInfo()
         }
     }
-    
-}
-
-#Preview {
-    MainContentView()
 }
