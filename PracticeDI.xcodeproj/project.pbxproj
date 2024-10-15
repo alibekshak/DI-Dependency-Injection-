@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		187E99ED2CBCD21B0097CF97 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99EC2CBCD21B0097CF97 /* InfoCard.swift */; };
 		187E99F02CBCD2BB0097CF97 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 187E99EF2CBCD2BB0097CF97 /* Kingfisher */; };
+		187E99F42CBE2DC50097CF97 /* InfoAddressesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99F32CBE2DC50097CF97 /* InfoAddressesView.swift */; };
 		18C25CDF2CB93A9100FF4D82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */; };
 		18C25CE22CB93F0B00FF4D82 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 18C25CE12CB93F0B00FF4D82 /* Moya */; };
 		18C25CE42CBBE93900FF4D82 /* MainContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C25CE32CBBE93900FF4D82 /* MainContentViewModel.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		187E99EC2CBCD21B0097CF97 /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 		187E99F12CBCDA8B0097CF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		187E99F32CBE2DC50097CF97 /* InfoAddressesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAddressesView.swift; sourceTree = "<group>"; };
 		18C25CDE2CB93A9100FF4D82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		18C25CE32CBBE93900FF4D82 /* MainContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentViewModel.swift; sourceTree = "<group>"; };
 		18C25CE52CBBEB8700FF4D82 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 				187E99EC2CBCD21B0097CF97 /* InfoCard.swift */,
 			);
 			path = Auxiliary;
+			sourceTree = "<group>";
+		};
+		187E99F22CBE2D9F0097CF97 /* InfoAddresses */ = {
+			isa = PBXGroup;
+			children = (
+				187E99F32CBE2DC50097CF97 /* InfoAddressesView.swift */,
+			);
+			path = InfoAddresses;
 			sourceTree = "<group>";
 		};
 		18C25CE02CB93F0B00FF4D82 /* Frameworks */ = {
@@ -148,6 +158,7 @@
 		18DF13642CB3B9A600FDB064 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				187E99F22CBE2D9F0097CF97 /* InfoAddresses */,
 				18C25CE92CBCCB6C00FF4D82 /* MainContenView */,
 				18DF13762CB3C3ED00FDB064 /* MainView */,
 				18DF13712CB3BD7100FDB064 /* LaunchScreen */,
@@ -292,6 +303,7 @@
 				18DF137D2CB3D97000FDB064 /* ResponseCompanies .swift in Sources */,
 				18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */,
 				18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */,
+				187E99F42CBE2DC50097CF97 /* InfoAddressesView.swift in Sources */,
 				187E99ED2CBCD21B0097CF97 /* InfoCard.swift in Sources */,
 				18DF13812CB3D9AE00FDB064 /* Address.swift in Sources */,
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
