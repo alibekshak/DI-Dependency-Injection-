@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184C12CA2CC6675A00D924D4 /* CustomTubItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12C92CC6675A00D924D4 /* CustomTubItems.swift */; };
+		184C12CD2CC6679600D924D4 /* EnumTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12CC2CC6679600D924D4 /* EnumTabItem.swift */; };
+		184C12CF2CC668B600D924D4 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12CE2CC668B600D924D4 /* MainTabView.swift */; };
+		184C12D12CC668EC00D924D4 /* CoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D02CC668EC00D924D4 /* CoordinatorManager.swift */; };
+		184C12D32CC6697700D924D4 /* TabViewWithCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D22CC6697700D924D4 /* TabViewWithCoordinator.swift */; };
+		184C12D52CC66A3C00D924D4 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D42CC66A3C00D924D4 /* HomeCoordinator.swift */; };
 		187E99ED2CBCD21B0097CF97 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99EC2CBCD21B0097CF97 /* InfoCard.swift */; };
 		187E99F02CBCD2BB0097CF97 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 187E99EF2CBCD2BB0097CF97 /* Kingfisher */; };
 		187E99F42CBE2DC50097CF97 /* InfoAddressesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99F32CBE2DC50097CF97 /* InfoAddressesView.swift */; };
@@ -30,6 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184C12C92CC6675A00D924D4 /* CustomTubItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTubItems.swift; sourceTree = "<group>"; };
+		184C12CC2CC6679600D924D4 /* EnumTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTabItem.swift; sourceTree = "<group>"; };
+		184C12CE2CC668B600D924D4 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		184C12D02CC668EC00D924D4 /* CoordinatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorManager.swift; sourceTree = "<group>"; };
+		184C12D22CC6697700D924D4 /* TabViewWithCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewWithCoordinator.swift; sourceTree = "<group>"; };
+		184C12D42CC66A3C00D924D4 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		187E99EC2CBCD21B0097CF97 /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 		187E99F12CBCDA8B0097CF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		187E99F32CBE2DC50097CF97 /* InfoAddressesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAddressesView.swift; sourceTree = "<group>"; };
@@ -65,6 +77,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184C12C72CC6672000D924D4 /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				184C12C92CC6675A00D924D4 /* CustomTubItems.swift */,
+				184C12CE2CC668B600D924D4 /* MainTabView.swift */,
+				184C12D22CC6697700D924D4 /* TabViewWithCoordinator.swift */,
+			);
+			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		184C12CB2CC6677D00D924D4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				184C12CC2CC6679600D924D4 /* EnumTabItem.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		187E99EB2CBCD1F90097CF97 /* Auxiliary */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +147,7 @@
 		18DF13522CB3B93C00FDB064 /* PracticeDI */ = {
 			isa = PBXGroup;
 			children = (
+				184C12CB2CC6677D00D924D4 /* Sources */,
 				187E99F12CBCDA8B0097CF97 /* Info.plist */,
 				18DF13662CB3B9B500FDB064 /* Model  */,
 				18DF13652CB3B9AE00FDB064 /* ViewModel */,
@@ -151,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				18DF13672CB3BB6100FDB064 /* AppCoordinator.swift */,
+				184C12D02CC668EC00D924D4 /* CoordinatorManager.swift */,
+				184C12D42CC66A3C00D924D4 /* HomeCoordinator.swift */,
 			);
 			path = Coodinator;
 			sourceTree = "<group>";
@@ -158,6 +191,7 @@
 		18DF13642CB3B9A600FDB064 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				184C12C72CC6672000D924D4 /* MainTabView */,
 				187E99F22CBE2D9F0097CF97 /* InfoAddresses */,
 				18C25CE92CBCCB6C00FF4D82 /* MainContenView */,
 				18DF13762CB3C3ED00FDB064 /* MainView */,
@@ -302,11 +336,17 @@
 				18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */,
 				18DF137D2CB3D97000FDB064 /* ResponseCompanies .swift in Sources */,
 				18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */,
+				184C12D12CC668EC00D924D4 /* CoordinatorManager.swift in Sources */,
+				184C12D52CC66A3C00D924D4 /* HomeCoordinator.swift in Sources */,
+				184C12D32CC6697700D924D4 /* TabViewWithCoordinator.swift in Sources */,
+				184C12CD2CC6679600D924D4 /* EnumTabItem.swift in Sources */,
 				18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */,
 				187E99F42CBE2DC50097CF97 /* InfoAddressesView.swift in Sources */,
 				187E99ED2CBCD21B0097CF97 /* InfoCard.swift in Sources */,
+				184C12CA2CC6675A00D924D4 /* CustomTubItems.swift in Sources */,
 				18DF13812CB3D9AE00FDB064 /* Address.swift in Sources */,
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
+				184C12CF2CC668B600D924D4 /* MainTabView.swift in Sources */,
 				18DF13832CB3D9C100FDB064 /* Contact.swift in Sources */,
 				18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */,
 				18C25CE42CBBE93900FF4D82 /* MainContentViewModel.swift in Sources */,

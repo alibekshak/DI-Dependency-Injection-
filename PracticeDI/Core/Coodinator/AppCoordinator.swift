@@ -16,8 +16,11 @@ class AppCoordinator: ObservableObject {
     }
     
     func navigateToMainConten() {
-        self.viewStack.removeAll()
-        navigate(to: MainContentView())
+        DispatchQueue.main.async {
+            self.viewStack.removeAll()
+            let mainTabView = MainTabView(selectedTabItem: .home)
+            self.navigate(to: mainTabView)
+        }
     }
     
     func navigateToInfoAddresses(addresses: [Address]) {

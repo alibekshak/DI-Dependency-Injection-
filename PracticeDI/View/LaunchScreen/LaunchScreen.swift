@@ -10,6 +10,7 @@ import SwiftUI
 struct LaunchScreen: View {
     
     @EnvironmentObject var appCoordinator: AppCoordinator
+    @EnvironmentObject var coordinatorManager: CoordinatorManager
     
     @State private var isAnimating = false
     
@@ -29,6 +30,7 @@ struct LaunchScreen: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 withAnimation {
                     appCoordinator.navigateToMainConten()
+                        
                 }
             }
         }
