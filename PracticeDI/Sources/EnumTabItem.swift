@@ -10,6 +10,7 @@ import Foundation
 enum EnumTabItem: String, CaseIterable, Identifiable {
     
     case home
+    case user
 
     
     var id: String {
@@ -20,6 +21,8 @@ enum EnumTabItem: String, CaseIterable, Identifiable {
         switch self {
         case .home:
             return "house.fill"
+        case .user:
+            return "person.fill"
         }
     }
 }

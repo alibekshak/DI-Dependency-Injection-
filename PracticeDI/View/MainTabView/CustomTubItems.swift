@@ -15,10 +15,11 @@ struct CustomTubItems: View {
         ZStack(alignment: .top) {
             Capsule()
                 .frame(height: 1)
-                .foregroundColor(Color(.systemBrown))
+                .foregroundColor(Color(.systemGray))
             tabItems
         }
         .padding(.bottom)
+        .background(Color(.systemGray6))
     }
     
     var tabItems: some View {
@@ -31,11 +32,14 @@ struct CustomTubItems: View {
                         Capsule()
                             .frame(width: 72, height: 1)
                         Image(systemName: tabItem.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 24, height: 24)
                     }
                     .foregroundColor(
                         tabItem == selectedTabItem ?
                         Color(.systemBlue) :
-                            Color(.systemGreen)
+                            Color(.systemGray)
                     )
                 }
             }

@@ -17,9 +17,11 @@ struct MainTabView: View {
             switch selectedTabItem {
             case .home:
                 TabViewWithCoordinator(coordinator: coordinatorManager.homeCoordinator)
+            case .user:
+                TabViewWithCoordinator(coordinator: coordinatorManager.userCoordinator)
             }
             CustomTubItems(selectedTabItem: $selectedTabItem)
-                
         }
+        .background(Color(.systemGray6))
     }
 }

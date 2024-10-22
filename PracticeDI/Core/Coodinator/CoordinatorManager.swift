@@ -16,17 +16,20 @@ class CoordinatorManager: CoordinatorProtocol {
     var viewStack: [AnyView] = []
     
     static let shared = CoordinatorManager()
-
+    
     @Published var appCoordinator: AppCoordinator
     @Published var homeCoordinator: HomeCoordinator
-
+    @Published var userCoordinator: UserCoordinator
+    
     private init() {
         guard let appCoordinator = DependencyManager.shared.resolve(AppCoordinator.self),
-              let homeCoordinator = DependencyManager.shared.resolve(HomeCoordinator.self) else {
+              let homeCoordinator = DependencyManager.shared.resolve(HomeCoordinator.self),
+              let userCoordinator = DependencyManager.shared.resolve(UserCoordinator.self) else {
             fatalError("Failed to resolve one or more coordinators.")
         }
-
+        
         self.appCoordinator = appCoordinator
         self.homeCoordinator = homeCoordinator
+        self.userCoordinator = userCoordinator
     }
 }
