@@ -1,30 +1,27 @@
 //
-//  AppCoordinator.swift
+//  HomeCoordinator.swift
 //  PracticeDI
 //
-//  Created by Alibek Shakirov on 07.10.2024.
+//  Created by Alibek Shakirov on 21.10.2024.
 //
 
+import Foundation
 import SwiftUI
 
-
-class AppCoordinator: ObservableObject {
+class HomeCoordinator: CoordinatorProtocol {
     @Published var viewStack: [AnyView] = []
     
     init() {
-        naviageToLaunchScreen()
+        navigateToMainConten()
     }
     
     func navigateToMainConten() {
-        DispatchQueue.main.async {
-            self.viewStack.removeAll()
-            let mainTabView = MainTabView(selectedTabItem: .home)
-            self.navigate(to: mainTabView)
-        }
+        self.viewStack.removeAll()
+        navigate(to: MainContentView())
     }
     
-    func naviageToLaunchScreen() {
-        navigate(to: LaunchScreen())
+    func navigateToInfoAddresses(addresses: [Address]) {
+        navigate(to: InfoAddressesView(addresses: addresses))
     }
     
     func navigate<T: View>(to view: T) {
@@ -32,7 +29,7 @@ class AppCoordinator: ObservableObject {
             self.viewStack.append(AnyView(view))
         }
     }
-
+    
     func navigateBack() {
         if viewStack.count > 1 {
             viewStack.removeLast()

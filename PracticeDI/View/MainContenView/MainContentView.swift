@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainContentView: View {
     
-    @EnvironmentObject var coordinator: AppCoordinator
+    @EnvironmentObject var coordinator: HomeCoordinator
     
     @StateObject var viewModel: MainContentViewModel = {
         if let viewModel = DependencyManager.shared.resolve(MainContentViewModel.self) {
@@ -23,22 +23,39 @@ struct MainContentView: View {
     
     var body: some View {
         VStack(spacing: .zero) {
-            ScrollView(showsIndicators: false) {
-                LazyVGrid(columns: colums, alignment: .center, spacing: 8) {
-                    ForEach(viewModel.companyInfo, id: \.id) { info in
-                        InfoCard(info: info)
-                            .onTapGesture {
-                                withAnimation {
-                                    coordinator.navigateToInfoAddresses(addresses: info.addresses)
-                                }
-                            }
-                    }
-                }
+            if viewModel.isLoading {
+                loadingView
+            } else {
+                infoCard
             }
         }
         .padding(.horizontal, 12)
         .onAppear {
             viewModel.getCompanyInfo()
+        }
+        .background(Color(.systemGray6))
+    }
+    
+    var loadingView: some View {
+        VStack {
+            ProgressView()
+                .foregroundStyle(Color(uiColor: .label))
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+    }
+    
+    var infoCard: some View {
+        ScrollView(showsIndicators: false) {
+            LazyVGrid(columns: colums, alignment: .center, spacing: 8) {
+                ForEach(viewModel.companyInfo, id: \.id) { info in
+                    InfoCard(info: info)
+                        .onTapGesture {
+                            withAnimation(.easeIn(duration: 0.5)) {
+                                coordinator.navigateToInfoAddresses(addresses: info.addresses)
+                            }
+                        }
+                }
+            }
         }
     }
 }

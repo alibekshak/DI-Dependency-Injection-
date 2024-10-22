@@ -27,6 +27,18 @@ class DependencyManager {
             NetworkManager()
         }.inObjectScope(.container)
         
+        container.register(CoordinatorManager.self) { _ in
+            CoordinatorManager.shared
+        }.inObjectScope(.container)
+
+        container.register(HomeCoordinator.self) { _ in
+            HomeCoordinator()
+        }.inObjectScope(.container)
+        
+        container.register(UserCoordinator.self) { _ in
+            UserCoordinator()
+        }.inObjectScope(.container)
+        
         container.register(MainContentViewModel.self) { resolver in
             guard let networkManager = resolver.resolve(NetworkManager.self),
                   let coordinator = resolver.resolve(AppCoordinator.self) else {

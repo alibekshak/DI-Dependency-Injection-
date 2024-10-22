@@ -11,6 +11,7 @@ import Foundation
 class MainContentViewModel: ObservableObject {
     
     @Published var companyInfo: [UserData] = []
+    @Published var isLoading: Bool = false
     
     private var networkManager: NetworkManager?
     private var coordinator: AppCoordinator?
@@ -25,15 +26,21 @@ class MainContentViewModel: ObservableObject {
             print("Network manager not available")
             return
         }
+        
+        isLoading = true
                 
         networkManager.getCompanyInfo(quantity: 10) {  result in
-            switch result {
-            case .success(let response):
-                print("Success: \(response)")
-                self.companyInfo = response.data
-            case .failure(let error):
-                print("Error: \(error)")
+            DispatchQueue.main.async {
+                self.isLoading = false
+                switch result {
+                case .success(let response):
+                    print("Success: \(response)")
+                    self.companyInfo = response.data
+                case .failure(let error):
+                    print("Error: \(error)")
+                }
             }
+
         }
     }
 }
