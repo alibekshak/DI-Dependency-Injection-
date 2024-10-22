@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainContentView: View {
     
-    @EnvironmentObject var coordinator: AppCoordinator
+    @EnvironmentObject var coordinator: HomeCoordinator
     
     @StateObject var viewModel: MainContentViewModel = {
         if let viewModel = DependencyManager.shared.resolve(MainContentViewModel.self) {
@@ -28,7 +28,7 @@ struct MainContentView: View {
                     ForEach(viewModel.companyInfo, id: \.id) { info in
                         InfoCard(info: info)
                             .onTapGesture {
-                                withAnimation {
+                                withAnimation(.easeIn(duration: 0.5)) {
                                     coordinator.navigateToInfoAddresses(addresses: info.addresses)
                                 }
                             }

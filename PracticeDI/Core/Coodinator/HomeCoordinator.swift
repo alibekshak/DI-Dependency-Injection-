@@ -20,6 +20,10 @@ class HomeCoordinator: CoordinatorProtocol {
         navigate(to: MainContentView())
     }
     
+    func navigateToInfoAddresses(addresses: [Address]) {
+        navigate(to: InfoAddressesView(addresses: addresses))
+    }
+    
     func navigate<T: View>(to view: T) {
         DispatchQueue.main.async {
             self.viewStack.append(AnyView(view))

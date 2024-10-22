@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InfoAddressesView: View {
     
-    @EnvironmentObject var coordinator: AppCoordinator
+    @EnvironmentObject var coordinator: HomeCoordinator
     
     var addresses: [Address]
     
@@ -28,7 +28,7 @@ struct InfoAddressesView: View {
     var navigationBar: some View {
         HStack {
             Button {
-                withAnimation {
+                withAnimation(.easeOut) {
                     coordinator.navigateBack()
                 }
             } label: {
