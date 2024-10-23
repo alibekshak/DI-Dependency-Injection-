@@ -56,6 +56,7 @@ struct MainContentView: View {
                         }
                 }
             }
+            .padding(.bottom)
         }
     }
 }

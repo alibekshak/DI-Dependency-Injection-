@@ -21,6 +21,7 @@ struct InfoCard: View {
             Text( info.email ?? "")
                 .font(.system(size: 12, weight: .semibold))
                 .foregroundStyle(Color(.systemGray2))
+            
         }
         .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
         .padding(.vertical, 8)
@@ -46,9 +47,26 @@ struct InfoCard: View {
                 .font(.system(size: 14, weight: .bold))
             Text(info.phone ?? "")
             Text(info.country ?? "")
+            websiteButton(info: info)
         }
         .font(.system(size: 12, weight: .semibold))
         .foregroundColor(Color(.black))
+    }
+    
+    func websiteButton(info: UserData) -> some View {
+        Button {
+            if let website = info.website, let url = URL(string: website) {
+                 UIApplication.shared.open(url)
+             } else {
+                 print("Некорректный URL")
+             }
+        } label: {
+            Text("Website - \(info.website ?? "No website")")
+                .underline()
+                .font(.system(size: 14, weight: .medium))
+                .padding(.vertical, 8)
+                .contentShape(Rectangle())
+        }
     }
 }
 
