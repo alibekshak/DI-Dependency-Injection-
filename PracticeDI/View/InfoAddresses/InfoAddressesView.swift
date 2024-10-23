@@ -31,7 +31,7 @@ struct InfoAddressesView: View {
     }
     
     func addressCard(address: Address) -> some View {
-        VStack(alignment: .leading, spacing: .zero) {
+        VStack(alignment: .leading, spacing: 6) {
             Text("Address - \(address.streetName ?? ""), \(address.buildingNumber ?? "")")
                 .font(.system(size: 18, weight: .semibold))
             Text("Country - \(address.country ?? ""), \(address.city ?? "")")

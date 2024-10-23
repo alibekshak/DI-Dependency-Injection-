@@ -20,8 +20,6 @@ struct InfoCard: View {
             }
             Text( info.email ?? "")
                 .font(.system(size: 12, weight: .semibold))
-                .foregroundStyle(Color(.systemGray2))
-            
         }
         .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
         .padding(.vertical, 8)
