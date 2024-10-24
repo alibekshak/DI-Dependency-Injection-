@@ -12,6 +12,18 @@ class MainContentViewModel: ObservableObject {
     
     @Published var companyInfo: [UserData] = []
     @Published var isLoading: Bool = false
+    @Published var searchText = ""
+    @Published var isActive = false
+    
+    var filteredCompanyInfo: [UserData] {
+        if searchText.isEmpty {
+            return companyInfo
+        } else {
+            return companyInfo.filter { company in
+                company.name?.lowercased().contains(searchText.lowercased()) ?? false
+            }
+        }
+    }
     
     private var networkManager: NetworkManager?
     private var coordinator: AppCoordinator?

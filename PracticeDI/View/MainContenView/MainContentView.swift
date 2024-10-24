@@ -45,18 +45,28 @@ struct MainContentView: View {
     }
     
     var infoCard: some View {
-        ScrollView(showsIndicators: false) {
-            LazyVGrid(columns: colums, alignment: .center, spacing: 8) {
-                ForEach(viewModel.companyInfo, id: \.id) { info in
-                    InfoCard(info: info)
-                        .onTapGesture {
-                            withAnimation(.easeIn(duration: 0.5)) {
-                                coordinator.navigateToInfoAddresses(addresses: info.addresses)
+        ZStack(alignment: .top) {
+
+            
+            ScrollView(showsIndicators: false) {
+                LazyVGrid(columns: colums, alignment: .center, spacing: 8) {
+                    ForEach(viewModel.filteredCompanyInfo, id: \.id) { info in
+                        InfoCard(info: info)
+                            .onTapGesture {
+                                withAnimation(.easeIn(duration: 0.5)) {
+                                    coordinator.navigateToInfoAddresses(addresses: info.addresses)
+                                }
                             }
-                        }
+                    }
                 }
+                .padding(.bottom)
+                .padding(.top, 68)
             }
-            .padding(.bottom)
+            SearchView(
+                placeholder: "Search Company",
+                searchText: $viewModel.searchText,
+                searchActive: $viewModel.isActive
+            )
         }
     }
 }

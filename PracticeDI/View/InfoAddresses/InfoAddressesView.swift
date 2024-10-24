@@ -55,7 +55,7 @@ struct InfoAddressesView: View {
                     coordinator.navigateBack()
                 }
             } label: {
-                Image(systemName: "xmark")
+                Image(systemName: "chevron.left")
                     .font(.system(size: 20, weight: .bold ,design: .rounded))
             }
             Spacer()
