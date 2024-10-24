@@ -16,51 +16,48 @@ struct SearchView: View {
     @FocusState var isFocused:Bool
     
     var body: some View {
-        Group {
-            HStack(spacing: 12) {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-
-                    // Search text field
-                    ZStack (alignment: .leading) {
-                        if searchText.isEmpty {
-                            Text(placeholder)
-                                .lineLimit(1)
-                        }
-                        TextField("", text: $searchText, onEditingChanged: { isEditing in
-                            withAnimation(.snappy) {
-                                self.searchActive = true
-                            }
-                        })
-                        .focused($isFocused)
-                        .foregroundColor(.primary)
-                        .textFieldStyle(.plain)
-                    }
-                    
-                    if searchText != "" {
-                        Button(action: {
-                            self.searchText = ""
-                        }) {
-                            Image(systemName: "xmark.circle.fill")
-                        }
-                    }
+        HStack {
+            Image(systemName: "magnifyingglass")
+            
+            // Search text field
+            ZStack (alignment: .leading) {
+                if searchText.isEmpty {
+                    Text(placeholder)
+                        .lineLimit(1)
                 }
-                .onTapGesture {
-                    isFocused = true
-                }
-                .foregroundStyle(Color(uiColor: .tertiaryLabel))
-                .frame(maxWidth: .infinity)
-                .font(.system(size: 16, weight: .regular))
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .foregroundColor(Color(uiColor: .secondarySystemBackground))
-                )
-                .overlay {
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(Color(.systemGray4), lineWidth: 1)
+                TextField("", text: $searchText, onEditingChanged: { isEditing in
+                    withAnimation(.snappy) {
+                        self.searchActive = true
+                    }
+                })
+                .focused($isFocused)
+                .foregroundColor(.black)
+                .textFieldStyle(.plain)
+            }
+            
+            if searchText != "" {
+                Button(action: {
+                    self.searchText = ""
+                }) {
+                    Image(systemName: "xmark")
                 }
             }
         }
+        .onTapGesture {
+            isFocused = true
+        }
+        .foregroundStyle(Color(uiColor: .black).opacity(0.8))
+        .frame(maxWidth: .infinity)
+        .font(.system(size: 16, weight: .regular))
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .foregroundColor(Color(uiColor: .white))
+        )
+        .overlay {
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color(.systemGray4), lineWidth: 1)
+        }
+        .padding(.bottom, 1)
     }
 }

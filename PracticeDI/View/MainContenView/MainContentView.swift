@@ -45,12 +45,8 @@ struct MainContentView: View {
     }
     
     var infoCard: some View {
-        VStack(spacing: 12) {
-            SearchView(
-                placeholder: "Search Company",
-                searchText: $viewModel.searchText,
-                searchActive: $viewModel.isActive
-            )
+        ZStack(alignment: .top) {
+
             
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: colums, alignment: .center, spacing: 8) {
@@ -64,7 +60,13 @@ struct MainContentView: View {
                     }
                 }
                 .padding(.bottom)
+                .padding(.top, 68)
             }
+            SearchView(
+                placeholder: "Search Company",
+                searchText: $viewModel.searchText,
+                searchActive: $viewModel.isActive
+            )
         }
     }
 }
