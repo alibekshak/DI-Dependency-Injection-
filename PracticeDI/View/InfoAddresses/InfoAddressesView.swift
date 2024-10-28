@@ -13,14 +13,16 @@ struct InfoAddressesView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    var addresses: [Address]
+    @State var isQuestionmarkPressed: Bool = false
+    
+    var info: UserData
     
     var body: some View {
         VStack(alignment: .leading, spacing: .zero) {
             navigationBar
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 12) {
-                    ForEach(addresses, id: \.self) { address in
+                    ForEach(info.addresses, id: \.self) { address in
                         addressCard(address: address)
                     }
                 }
@@ -28,6 +30,10 @@ struct InfoAddressesView: View {
         }
         .navigationBarBackButtonHidden()
         .padding(.horizontal, 12)
+        .sheet(isPresented: $isQuestionmarkPressed) {
+            ContactInfo(contact: info.contact)
+                .presentationDetents([.medium])
+        }
     }
     
     func addressCard(address: Address) -> some View {
@@ -56,14 +62,24 @@ struct InfoAddressesView: View {
                 }
             } label: {
                 Image(systemName: "chevron.left")
-                    .font(.system(size: 20, weight: .bold ,design: .rounded))
             }
+            
             Spacer()
             Text("International offices")
                 .font(.system(size: 18, weight: .bold))
                 .padding(.trailing)
             Spacer()
+            
+            Button {
+                withAnimation {
+                    isQuestionmarkPressed.toggle()
+                }
+            } label: {
+                Image(systemName: "questionmark")
+            }
+            
         }
+        .font(.system(size: 20, weight: .bold ,design: .rounded))
         .foregroundStyle(colorScheme == .dark ? Color.white : Color.black)
         .padding(.bottom, 20)
     }
