@@ -20,8 +20,8 @@ class HomeCoordinator: CoordinatorProtocol {
         navigate(to: MainContentView())
     }
     
-    func navigateToInfoAddresses(addresses: [Address]) {
-        navigate(to: InfoAddressesView(addresses: addresses))
+    func navigateToInfoAddresses(info: UserData) {
+        navigate(to: InfoAddressesView(info: info))
     }
     
     func navigate<T: View>(to view: T) {

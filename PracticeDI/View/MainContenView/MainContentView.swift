@@ -54,7 +54,7 @@ struct MainContentView: View {
                         InfoCard(info: info)
                             .onTapGesture {
                                 withAnimation(.easeIn(duration: 0.5)) {
-                                    coordinator.navigateToInfoAddresses(addresses: info.addresses)
+                                    coordinator.navigateToInfoAddresses(info: info)
                                 }
                             }
                     }
