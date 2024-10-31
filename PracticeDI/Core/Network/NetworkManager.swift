@@ -35,4 +35,25 @@ class NetworkManager {
             }
         }
     }
+    
+    func getProducts(quantity: Int, completion: @escaping (Result<ProductsResponse, MoyaError>) -> Void) {
+        let params: [String: Any] = [
+            "_quantity": quantity
+        ]
+        
+        provider.request(.getProducts(params: params)) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let products = try JSONDecoder().decode(ProductsResponse.self, from: response.data)
+                    completion(.success(products))
+                } catch let decodingError {
+                    let moyaError = MoyaError.underlying(decodingError, response)
+                    completion(.failure(moyaError))
+                }
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

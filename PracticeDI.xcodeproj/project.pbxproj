@@ -17,6 +17,9 @@
 		184C12DA2CC76B8300D924D4 /* ProductsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D92CC76B8300D924D4 /* ProductsPage.swift */; };
 		184C12E02CC8F29B00D924D4 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12DF2CC8F29B00D924D4 /* SearchView.swift */; };
 		184C12E32CCFA3A500D924D4 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12E22CCFA3A500D924D4 /* ContactInfo.swift */; };
+		184C12EB2CD37ECC00D924D4 /* ProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12EA2CD37ECC00D924D4 /* ProductsResponse.swift */; };
+		184C12ED2CD37F0000D924D4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12EC2CD37F0000D924D4 /* Product.swift */; };
+		184C12EF2CD37F2E00D924D4 /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12EE2CD37F2E00D924D4 /* ProductImage.swift */; };
 		187E99ED2CBCD21B0097CF97 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99EC2CBCD21B0097CF97 /* InfoCard.swift */; };
 		187E99F02CBCD2BB0097CF97 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 187E99EF2CBCD2BB0097CF97 /* Kingfisher */; };
 		187E99F42CBE2DC50097CF97 /* InfoAddressesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99F32CBE2DC50097CF97 /* InfoAddressesView.swift */; };
@@ -50,6 +53,9 @@
 		184C12D92CC76B8300D924D4 /* ProductsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPage.swift; sourceTree = "<group>"; };
 		184C12DF2CC8F29B00D924D4 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		184C12E22CCFA3A500D924D4 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+		184C12EA2CD37ECC00D924D4 /* ProductsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsResponse.swift; sourceTree = "<group>"; };
+		184C12EC2CD37F0000D924D4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		184C12EE2CD37F2E00D924D4 /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		187E99EC2CBCD21B0097CF97 /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 		187E99F12CBCDA8B0097CF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		187E99F32CBE2DC50097CF97 /* InfoAddressesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAddressesView.swift; sourceTree = "<group>"; };
@@ -251,6 +257,9 @@
 				18DF137E2CB3D99800FDB064 /* UserData.swift */,
 				18DF13802CB3D9AE00FDB064 /* Address.swift */,
 				18DF13822CB3D9C100FDB064 /* Contact.swift */,
+				184C12EA2CD37ECC00D924D4 /* ProductsResponse.swift */,
+				184C12EC2CD37F0000D924D4 /* Product.swift */,
+				184C12EE2CD37F2E00D924D4 /* ProductImage.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -381,6 +390,7 @@
 				184C12CD2CC6679600D924D4 /* EnumTabItem.swift in Sources */,
 				18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */,
 				187E99F42CBE2DC50097CF97 /* InfoAddressesView.swift in Sources */,
+				184C12EF2CD37F2E00D924D4 /* ProductImage.swift in Sources */,
 				187E99ED2CBCD21B0097CF97 /* InfoCard.swift in Sources */,
 				184C12CA2CC6675A00D924D4 /* CustomTubItems.swift in Sources */,
 				18DF13812CB3D9AE00FDB064 /* Address.swift in Sources */,
@@ -388,8 +398,10 @@
 				18DF13682CB3BB6100FDB064 /* AppCoordinator.swift in Sources */,
 				184C12CF2CC668B600D924D4 /* MainTabView.swift in Sources */,
 				18DF13832CB3D9C100FDB064 /* Contact.swift in Sources */,
+				184C12ED2CD37F0000D924D4 /* Product.swift in Sources */,
 				18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */,
 				18C25CE42CBBE93900FF4D82 /* MainContentViewModel.swift in Sources */,
+				184C12EB2CD37ECC00D924D4 /* ProductsResponse.swift in Sources */,
 				18DF137B2CB3D0FB00FDB064 /* TargetService.swift in Sources */,
 				18DF13542CB3B93C00FDB064 /* PracticeDIApp.swift in Sources */,
 				18C25CE62CBBEB8700FF4D82 /* MainContentView.swift in Sources */,
