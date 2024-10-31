@@ -19,17 +19,17 @@ class CoordinatorManager: CoordinatorProtocol {
     
     @Published var appCoordinator: AppCoordinator
     @Published var homeCoordinator: HomeCoordinator
-    @Published var userCoordinator: UserCoordinator
+    @Published var productsCoordinator: ProductsCoordinator
     
     private init() {
         guard let appCoordinator = DependencyManager.shared.resolve(AppCoordinator.self),
               let homeCoordinator = DependencyManager.shared.resolve(HomeCoordinator.self),
-              let userCoordinator = DependencyManager.shared.resolve(UserCoordinator.self) else {
+              let productsCoordinator = DependencyManager.shared.resolve(ProductsCoordinator.self) else {
             fatalError("Failed to resolve one or more coordinators.")
         }
         
         self.appCoordinator = appCoordinator
         self.homeCoordinator = homeCoordinator
-        self.userCoordinator = userCoordinator
+        self.productsCoordinator = productsCoordinator
     }
 }

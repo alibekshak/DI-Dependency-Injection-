@@ -18,7 +18,7 @@ struct MainTabView: View {
             case .home:
                 TabViewWithCoordinator(coordinator: coordinatorManager.homeCoordinator)
             case .user:
-                TabViewWithCoordinator(coordinator: coordinatorManager.userCoordinator)
+                TabViewWithCoordinator(coordinator: coordinatorManager.productsCoordinator)
             }
             CustomTubItems(selectedTabItem: $selectedTabItem)
         }

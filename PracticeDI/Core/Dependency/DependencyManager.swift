@@ -35,8 +35,8 @@ class DependencyManager {
             HomeCoordinator()
         }.inObjectScope(.container)
         
-        container.register(UserCoordinator.self) { _ in
-            UserCoordinator()
+        container.register(ProductsCoordinator.self) { _ in
+            ProductsCoordinator()
         }.inObjectScope(.container)
         
         container.register(MainContentViewModel.self) { resolver in
@@ -44,7 +44,16 @@ class DependencyManager {
                   let coordinator = resolver.resolve(AppCoordinator.self) else {
                 fatalError("Unable to resolve dependencies for MainContentViewModel")
             }
+            
             return MainContentViewModel(networkManager: networkManager, coordinator: coordinator)
+        }
+        
+        container.register(ProductsPageViewModel.self) { resolver in
+            guard let networkManager = resolver.resolve(NetworkManager.self) else {
+                fatalError("Unable to resolve dependencies for MainContentViewModel")
+            }
+            
+            return ProductsPageViewModel(networkManager: networkManager)
         }
     }
 
