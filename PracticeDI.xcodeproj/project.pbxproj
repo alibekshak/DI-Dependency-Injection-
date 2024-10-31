@@ -13,8 +13,8 @@
 		184C12D12CC668EC00D924D4 /* CoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D02CC668EC00D924D4 /* CoordinatorManager.swift */; };
 		184C12D32CC6697700D924D4 /* TabViewWithCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D22CC6697700D924D4 /* TabViewWithCoordinator.swift */; };
 		184C12D52CC66A3C00D924D4 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D42CC66A3C00D924D4 /* HomeCoordinator.swift */; };
-		184C12D72CC76A4D00D924D4 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D62CC76A4D00D924D4 /* UserCoordinator.swift */; };
-		184C12DA2CC76B8300D924D4 /* UserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D92CC76B8300D924D4 /* UserPage.swift */; };
+		184C12D72CC76A4D00D924D4 /* ProductsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D62CC76A4D00D924D4 /* ProductsCoordinator.swift */; };
+		184C12DA2CC76B8300D924D4 /* ProductsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12D92CC76B8300D924D4 /* ProductsPage.swift */; };
 		184C12E02CC8F29B00D924D4 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12DF2CC8F29B00D924D4 /* SearchView.swift */; };
 		184C12E32CCFA3A500D924D4 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12E22CCFA3A500D924D4 /* ContactInfo.swift */; };
 		187E99ED2CBCD21B0097CF97 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99EC2CBCD21B0097CF97 /* InfoCard.swift */; };
@@ -46,8 +46,8 @@
 		184C12D02CC668EC00D924D4 /* CoordinatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorManager.swift; sourceTree = "<group>"; };
 		184C12D22CC6697700D924D4 /* TabViewWithCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewWithCoordinator.swift; sourceTree = "<group>"; };
 		184C12D42CC66A3C00D924D4 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		184C12D62CC76A4D00D924D4 /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
-		184C12D92CC76B8300D924D4 /* UserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage.swift; sourceTree = "<group>"; };
+		184C12D62CC76A4D00D924D4 /* ProductsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCoordinator.swift; sourceTree = "<group>"; };
+		184C12D92CC76B8300D924D4 /* ProductsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPage.swift; sourceTree = "<group>"; };
 		184C12DF2CC8F29B00D924D4 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		184C12E22CCFA3A500D924D4 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		187E99EC2CBCD21B0097CF97 /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		184C12D82CC76B7000D924D4 /* UserPage */ = {
 			isa = PBXGroup;
 			children = (
-				184C12D92CC76B8300D924D4 /* UserPage.swift */,
+				184C12D92CC76B8300D924D4 /* ProductsPage.swift */,
 			);
 			path = UserPage;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				18DF13672CB3BB6100FDB064 /* AppCoordinator.swift */,
 				184C12D02CC668EC00D924D4 /* CoordinatorManager.swift */,
 				184C12D42CC66A3C00D924D4 /* HomeCoordinator.swift */,
-				184C12D62CC76A4D00D924D4 /* UserCoordinator.swift */,
+				184C12D62CC76A4D00D924D4 /* ProductsCoordinator.swift */,
 			);
 			path = Coodinator;
 			sourceTree = "<group>";
@@ -371,12 +371,12 @@
 				18C25CDF2CB93A9100FF4D82 /* NetworkManager.swift in Sources */,
 				18DF136B2CB3BC1400FDB064 /* DependencyManager.swift in Sources */,
 				18DF137D2CB3D97000FDB064 /* ResponseCompanies .swift in Sources */,
-				184C12D72CC76A4D00D924D4 /* UserCoordinator.swift in Sources */,
+				184C12D72CC76A4D00D924D4 /* ProductsCoordinator.swift in Sources */,
 				184C12E02CC8F29B00D924D4 /* SearchView.swift in Sources */,
 				18DF13782CB3C3FB00FDB064 /* MainView.swift in Sources */,
 				184C12D12CC668EC00D924D4 /* CoordinatorManager.swift in Sources */,
 				184C12D52CC66A3C00D924D4 /* HomeCoordinator.swift in Sources */,
-				184C12DA2CC76B8300D924D4 /* UserPage.swift in Sources */,
+				184C12DA2CC76B8300D924D4 /* ProductsPage.swift in Sources */,
 				184C12D32CC6697700D924D4 /* TabViewWithCoordinator.swift in Sources */,
 				184C12CD2CC6679600D924D4 /* EnumTabItem.swift in Sources */,
 				18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */,

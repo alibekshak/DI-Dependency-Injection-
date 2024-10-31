@@ -1,5 +1,5 @@
 //
-//  UserCoordinator.swift
+//  ProductsCoordinator.swift
 //  PracticeDI
 //
 //  Created by Alibek Shakirov on 22.10.2024.
@@ -8,15 +8,15 @@
 import Foundation
 import SwiftUI
 
-class UserCoordinator: CoordinatorProtocol {
+class ProductsCoordinator: CoordinatorProtocol {
     @Published var viewStack: [AnyView] = []
     
     init() {
-        userPage()
+        productsPage()
     }
     
-    func userPage() {
-        navigate(to: UserPage())
+    func productsPage() {
+        navigate(to: ProductsPage())
     }
     
     func navigate<T: View>(to view: T) {

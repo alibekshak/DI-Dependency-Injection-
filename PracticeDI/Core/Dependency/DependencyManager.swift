@@ -35,8 +35,8 @@ class DependencyManager {
             HomeCoordinator()
         }.inObjectScope(.container)
         
-        container.register(UserCoordinator.self) { _ in
-            UserCoordinator()
+        container.register(ProductsCoordinator.self) { _ in
+            ProductsCoordinator()
         }.inObjectScope(.container)
         
         container.register(MainContentViewModel.self) { resolver in

@@ -1,5 +1,5 @@
 //
-//  UserPage.swift
+//  ProductsPage.swift
 //  PracticeDI
 //
 //  Created by Alibek Shakirov on 22.10.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserPage: View {
+struct ProductsPage: View {
     var body: some View {
         VStack {
             Spacer()
@@ -30,5 +30,5 @@ struct UserPage: View {
 }
 
 #Preview {
-    UserPage()
+    ProductsPage()
 }
