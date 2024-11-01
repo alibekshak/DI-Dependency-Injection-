@@ -19,8 +19,10 @@ struct ProductsPage: View {
     
     var body: some View {
         VStack(spacing: .zero) {
-            ForEach(viewModel.products, id: \.self) { product in
-                Text(product.name)
+            ScrollView(showsIndicators: false) {
+                ForEach(viewModel.products, id: \.self) { product in
+                    ProductCard(info: product)
+                }
             }
             Spacer()
         }
