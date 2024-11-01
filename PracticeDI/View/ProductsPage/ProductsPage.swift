@@ -17,11 +17,15 @@ struct ProductsPage: View {
         }
     }()
     
+    let columns = Array(repeating: GridItem(.flexible(), alignment: .top), count: 2)
+    
     var body: some View {
         VStack(spacing: .zero) {
             ScrollView(showsIndicators: false) {
-                ForEach(viewModel.products, id: \.self) { product in
-                    ProductCard(info: product)
+                LazyVGrid(columns: columns, spacing: 12) {
+                    ForEach(viewModel.products, id: \.self) { product in
+                        ProductCard(info: product)
+                    }
                 }
             }
             Spacer()
