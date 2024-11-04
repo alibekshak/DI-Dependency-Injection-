@@ -46,8 +46,6 @@ struct MainContentView: View {
     
     var infoCard: some View {
         ZStack(alignment: .top) {
-
-            
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: colums, alignment: .center, spacing: 8) {
                     ForEach(viewModel.filteredCompanyInfo, id: \.id) { info in

@@ -17,17 +17,39 @@ struct ProductsPage: View {
         }
     }()
     
+    let columns = Array(repeating: GridItem(.flexible(), alignment: .top), count: 2)
+    
     var body: some View {
         VStack(spacing: .zero) {
-            ForEach(viewModel.products, id: \.self) { product in
-                Text(product.name)
+            if viewModel.isLoading {
+                loadingView
+            } else {
+                products
             }
-            Spacer()
         }
         .padding(.horizontal, 12)
         .background(Color(.systemGray6))
         .onAppear {
             viewModel.getProducts()
         }
+    }
+    
+    var products: some View {
+        ScrollView(showsIndicators: false) {
+            LazyVGrid(columns: columns, spacing: 12) {
+                ForEach(viewModel.products, id: \.self) { product in
+                    ProductCard(info: product)
+                }
+            }
+            .padding(.bottom)
+        }
+    }
+    
+    var loadingView: some View {
+        VStack {
+            ProgressView()
+                .foregroundStyle(Color(uiColor: .label))
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
     }
 }
