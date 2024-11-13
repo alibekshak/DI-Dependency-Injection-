@@ -37,9 +37,10 @@ struct ProductCard: View {
             .scaledToFit()
             .frame(width: 128, height: 128)
             .padding(8)
+            .foregroundStyle(Color(.systemGray))
             .background {
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(.gray)
+                    .fill(Color(.systemGray5))
             }
             .padding(.bottom, 12)
     }
