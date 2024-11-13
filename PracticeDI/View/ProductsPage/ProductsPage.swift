@@ -35,13 +35,22 @@ struct ProductsPage: View {
     }
     
     var products: some View {
-        ScrollView(showsIndicators: false) {
-            LazyVGrid(columns: columns, spacing: 12) {
-                ForEach(viewModel.products, id: \.self) { product in
-                    ProductCard(info: product)
+        ZStack(alignment: .top) {
+            ScrollView(showsIndicators: false) {
+                LazyVGrid(columns: columns, spacing: 12) {
+                    ForEach(viewModel.filteredProductInfo, id: \.self) { product in
+                        ProductCard(info: product)
+                    }
                 }
+                .padding(.bottom)
+                .padding(.top, 68)
             }
-            .padding(.bottom)
+            
+            SearchView(
+                placeholder: "Search Product",
+                searchText: $viewModel.searchText,
+                searchActive: $viewModel.isActive
+            )
         }
     }
     

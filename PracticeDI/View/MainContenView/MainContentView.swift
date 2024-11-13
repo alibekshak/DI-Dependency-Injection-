@@ -60,6 +60,7 @@ struct MainContentView: View {
                 .padding(.bottom)
                 .padding(.top, 68)
             }
+            
             SearchView(
                 placeholder: "Search Company",
                 searchText: $viewModel.searchText,
