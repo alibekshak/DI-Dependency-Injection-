@@ -17,6 +17,8 @@ struct ProductsPage: View {
         }
     }()
     
+    @EnvironmentObject var coordinator: ProductsCoordinator
+    
     let columns = Array(repeating: GridItem(.flexible(), alignment: .top), count: 2)
     
     var body: some View {
@@ -40,6 +42,11 @@ struct ProductsPage: View {
                 LazyVGrid(columns: columns, spacing: 12) {
                     ForEach(viewModel.filteredProductInfo, id: \.self) { product in
                         ProductCard(info: product)
+                            .onTapGesture {
+                                withAnimation {
+                                    coordinator.navigateToProductInfoPage()
+                                }
+                            }
                     }
                 }
                 .padding(.bottom)

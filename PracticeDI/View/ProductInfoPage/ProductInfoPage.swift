@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductInfoPage: View {
     
-    @EnvironmentObject var coordinator: HomeCoordinator
+    @EnvironmentObject var coordinator: ProductsCoordinator
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -20,6 +20,9 @@ struct ProductInfoPage: View {
             Image(systemName: "hammer.fill")
                 .resizable()
                 .scaledToFit()
+                .padding(20)
+            Text("Under construction")
+                .font(.title)
             Spacer()
         }
         .padding(.horizontal, 12)

@@ -19,6 +19,10 @@ class ProductsCoordinator: CoordinatorProtocol {
         navigate(to: ProductsPage())
     }
     
+    func navigateToProductInfoPage() {
+        navigate(to: ProductInfoPage())
+    }
+    
     func navigate<T: View>(to view: T) {
         DispatchQueue.main.async {
             self.viewStack.append(AnyView(view))
