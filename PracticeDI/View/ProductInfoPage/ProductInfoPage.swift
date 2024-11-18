@@ -13,19 +13,25 @@ struct ProductInfoPage: View {
     
     @Environment(\.colorScheme) var colorScheme
     
+    var product: Product
+    
     var body: some View {
         VStack(spacing: .zero) {
             navigationBar
-         
-            Image(systemName: "hammer.fill")
-                .resizable()
-                .scaledToFit()
-                .padding(20)
-            Text("Under construction")
-                .font(.title)
+            info
             Spacer()
         }
         .padding(.horizontal, 12)
+    }
+    
+    var info: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(product.name)
+            Text(product.description)
+            Text("Price: \(product.price)")
+        }
+        .font(.system(size: 18, weight: .medium))
+        .foregroundStyle(Color(.label))
     }
     
     var navigationBar: some View {
@@ -43,8 +49,4 @@ struct ProductInfoPage: View {
         .foregroundStyle(colorScheme == .dark ? Color.white : Color.black)
         .padding(.bottom, 20)
     }
-}
-
-#Preview {
-    ProductInfoPage()
 }

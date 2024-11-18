@@ -19,8 +19,8 @@ class ProductsCoordinator: CoordinatorProtocol {
         navigate(to: ProductsPage())
     }
     
-    func navigateToProductInfoPage() {
-        navigate(to: ProductInfoPage())
+    func navigateToProductInfoPage(product: Product) {
+        navigate(to: ProductInfoPage(product: product))
     }
     
     func navigate<T: View>(to view: T) {

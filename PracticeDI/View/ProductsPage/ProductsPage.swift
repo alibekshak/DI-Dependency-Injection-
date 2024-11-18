@@ -44,7 +44,7 @@ struct ProductsPage: View {
                         ProductCard(info: product)
                             .onTapGesture {
                                 withAnimation {
-                                    coordinator.navigateToProductInfoPage()
+                                    coordinator.navigateToProductInfoPage(product: product)
                                 }
                             }
                     }
