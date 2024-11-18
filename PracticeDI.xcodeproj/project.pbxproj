@@ -30,6 +30,7 @@
 		18C25CE42CBBE93900FF4D82 /* MainContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C25CE32CBBE93900FF4D82 /* MainContentViewModel.swift */; };
 		18C25CE62CBBEB8700FF4D82 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C25CE52CBBEB8700FF4D82 /* MainContentView.swift */; };
 		18C481222CE7105000C731C3 /* ProductInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C481212CE7105000C731C3 /* ProductInfoPage.swift */; };
+		18C481242CEB05F800C731C3 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C481232CEB05F800C731C3 /* CoordinatorProtocol.swift */; };
 		18DF13542CB3B93C00FDB064 /* PracticeDIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF13532CB3B93C00FDB064 /* PracticeDIApp.swift */; };
 		18DF13582CB3B93E00FDB064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF13572CB3B93E00FDB064 /* Assets.xcassets */; };
 		18DF135B2CB3B93E00FDB064 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF135A2CB3B93E00FDB064 /* Preview Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		18C25CE32CBBE93900FF4D82 /* MainContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentViewModel.swift; sourceTree = "<group>"; };
 		18C25CE52CBBEB8700FF4D82 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		18C481212CE7105000C731C3 /* ProductInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoPage.swift; sourceTree = "<group>"; };
+		18C481232CEB05F800C731C3 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		18DF13502CB3B93C00FDB064 /* PracticeDI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeDI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DF13532CB3B93C00FDB064 /* PracticeDIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDIApp.swift; sourceTree = "<group>"; };
 		18DF13572CB3B93E00FDB064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				184C12D02CC668EC00D924D4 /* CoordinatorManager.swift */,
 				184C12D42CC66A3C00D924D4 /* HomeCoordinator.swift */,
 				184C12D62CC76A4D00D924D4 /* ProductsCoordinator.swift */,
+				18C481232CEB05F800C731C3 /* CoordinatorProtocol.swift */,
 			);
 			path = Coodinator;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				184C12D52CC66A3C00D924D4 /* HomeCoordinator.swift in Sources */,
 				184C12DA2CC76B8300D924D4 /* ProductsPage.swift in Sources */,
 				184C12F12CD391FF00D924D4 /* ProductsPageViewModel.swift in Sources */,
+				18C481242CEB05F800C731C3 /* CoordinatorProtocol.swift in Sources */,
 				184C12D32CC6697700D924D4 /* TabViewWithCoordinator.swift in Sources */,
 				184C12CD2CC6679600D924D4 /* EnumTabItem.swift in Sources */,
 				18DF137F2CB3D99800FDB064 /* UserData.swift in Sources */,

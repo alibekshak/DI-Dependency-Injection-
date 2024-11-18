@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-
-class AppCoordinator: ObservableObject {
+class AppCoordinator: CoordinatorProtocol {
     @Published var viewStack: [AnyView] = []
     
     init() {

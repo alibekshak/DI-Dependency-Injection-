@@ -8,10 +8,6 @@
 import Foundation
 import SwiftUI
 
-protocol CoordinatorProtocol: ObservableObject {
-    var viewStack: [AnyView] { get set }
-}
-
 class CoordinatorManager: CoordinatorProtocol {
     var viewStack: [AnyView] = []
     
