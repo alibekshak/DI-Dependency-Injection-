@@ -31,7 +31,9 @@ class ProductsCoordinator: CoordinatorProtocol {
     
     func navigateBack() {
         if viewStack.count > 1 {
-            viewStack.removeLast()
+            withAnimation(.easeOut) {
+                viewStack.removeLast()
+            }
         }
     }
 }
