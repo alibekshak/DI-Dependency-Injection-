@@ -10,4 +10,5 @@ import SwiftUI
 
 protocol CoordinatorProtocol: ObservableObject {
     var viewStack: [AnyView] { get set }
+    func navigateBack()
 }

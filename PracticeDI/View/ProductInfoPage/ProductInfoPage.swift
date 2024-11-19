@@ -18,10 +18,12 @@ struct ProductInfoPage: View {
     var body: some View {
         VStack(spacing: .zero) {
             navigationBar
-            info
-            Spacer()
+            ScrollView {
+                info
+            }
         }
         .padding(.horizontal, 12)
+        .enableSwipeBack(coordinator: ProductsCoordinator.self)
     }
     
     var info: some View {
@@ -50,3 +52,13 @@ struct ProductInfoPage: View {
         .padding(.bottom, 20)
     }
 }
+
+extension View {
+    func enableSwipeBack<Coordinator: CoordinatorProtocol>(
+        coordinator: Coordinator.Type
+        
+    ) -> some View {
+        modifier(SwipeBackModifier<Coordinator>())
+    }
+}
+

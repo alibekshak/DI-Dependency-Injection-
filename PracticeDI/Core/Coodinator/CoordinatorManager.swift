@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-class CoordinatorManager: CoordinatorProtocol {
+class CoordinatorManager: ObservableObject {
+
     var viewStack: [AnyView] = []
     
     static let shared = CoordinatorManager()
