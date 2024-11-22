@@ -25,22 +25,21 @@ struct CustomTubItems: View {
     var tabItems: some View {
         HStack(spacing: 64) {
             ForEach(EnumTabItem.allCases) { tabItem in
-                Button {
+                VStack(spacing: 24) {
+                    Capsule()
+                        .frame(width: 72, height: 1)
+                    Image(systemName: tabItem.image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                }
+                .foregroundColor(
+                    tabItem == selectedTabItem ?
+                    Color(.systemBlue) :
+                        Color(.systemGray)
+                )
+                .onTapGesture {
                     selectedTabItem = tabItem
-                } label: {
-                    VStack(spacing: 24) {
-                        Capsule()
-                            .frame(width: 72, height: 1)
-                        Image(systemName: tabItem.image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                    }
-                    .foregroundColor(
-                        tabItem == selectedTabItem ?
-                        Color(.systemBlue) :
-                            Color(.systemGray)
-                    )
                 }
             }
         }

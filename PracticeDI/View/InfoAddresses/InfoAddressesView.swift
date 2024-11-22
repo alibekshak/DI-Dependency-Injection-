@@ -34,6 +34,7 @@ struct InfoAddressesView: View {
             ContactInfo(contact: info.contact)
                 .presentationDetents([.medium])
         }
+        .enableSwipeBack(coordinator: HomeCoordinator.self)
     }
     
     func addressCard(address: Address) -> some View {
