@@ -23,5 +23,6 @@ struct SwipeBackModifier<Coordinator: CoordinatorProtocol>: ViewModifier {
                         }
                     }
             )
+            .transition(.move(edge: .trailing).combined(with: .opacity))
     }
 }
