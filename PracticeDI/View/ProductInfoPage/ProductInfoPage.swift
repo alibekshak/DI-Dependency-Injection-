@@ -18,8 +18,9 @@ struct ProductInfoPage: View {
     var body: some View {
         VStack(spacing: .zero) {
             navigationBar
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 info
+                products
             }
         }
         .padding(.horizontal, 12)
@@ -34,6 +35,20 @@ struct ProductInfoPage: View {
         }
         .font(.system(size: 18, weight: .medium))
         .foregroundStyle(Color(.label))
+    }
+    
+    var products: some View {
+        ForEach(product.images, id: \.self) { image in
+            VStack(spacing: 8) {
+                Text(image.title)
+                Text(image.description)
+            }
+            .padding()
+            .background {
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(lineWidth: 1)
+            }
+        }
     }
     
     var navigationBar: some View {
