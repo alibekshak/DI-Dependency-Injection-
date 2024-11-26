@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProductInfoPage: View {
     
@@ -39,10 +40,23 @@ struct ProductInfoPage: View {
     
     var products: some View {
         ForEach(product.images, id: \.self) { image in
-            VStack(spacing: 8) {
-                Text(image.title)
-                Text(image.description)
+            HStack {
+                KFImage(URL(string: image.url))
+                    .placeholder {
+                       ProgressView()
+                    }
+                    .cacheOriginalImage()
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: 150, maxHeight: 150)
+                    .clipped()
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(image.title)
+                    Text(image.description)
+                }
             }
+
             .padding()
             .background {
                 RoundedRectangle(cornerRadius: 12)
