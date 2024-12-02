@@ -23,6 +23,7 @@ struct ProductInfoPage: View {
                 info
                 products
             }
+            .padding(.bottom)
         }
         .padding(.horizontal, 12)
         .enableSwipeBack(coordinator: ProductsCoordinator.self)
@@ -40,23 +41,25 @@ struct ProductInfoPage: View {
     
     var products: some View {
         ForEach(product.images, id: \.self) { image in
-            HStack {
-                KFImage(URL(string: image.url))
-                    .placeholder {
-                       ProgressView()
-                    }
-                    .cacheOriginalImage()
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: 150, maxHeight: 150)
-                    .clipped()
+            VStack {
+                Text(image.title)
+                    .font(.title3)
                 
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(image.title)
+                HStack(alignment: .top) {
+                    KFImage(URL(string: image.url))
+                        .placeholder {
+                           ProgressView()
+                        }
+                        .cacheOriginalImage()
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: 150, maxHeight: 150)
+                        .clipped()
+                    Spacer()
                     Text(image.description)
+                        .font(.footnote)
                 }
             }
-
             .padding()
             .background {
                 RoundedRectangle(cornerRadius: 12)
@@ -74,6 +77,10 @@ struct ProductInfoPage: View {
             } label: {
                 Image(systemName: "chevron.left")
             }
+            Spacer()
+            Text("Info")
+                .font(.system(size: 18, weight: .bold))
+                .padding(.trailing)
             Spacer()
         }
         .font(.system(size: 20, weight: .bold ,design: .rounded))
