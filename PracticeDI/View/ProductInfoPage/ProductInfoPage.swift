@@ -23,7 +23,6 @@ struct ProductInfoPage: View {
                 info
                 products
             }
-            .padding(.bottom)
         }
         .padding(.horizontal, 12)
         .enableSwipeBack(coordinator: ProductsCoordinator.self)
@@ -33,7 +32,11 @@ struct ProductInfoPage: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(product.name)
             Text(product.description)
-            Text("Price: \(product.price)")
+            HStack {
+                Text("Price: \(String(format: "%.2f", product.price))")
+                Spacer()
+                Text("NetPrice: \(String(format: "%.2f", product.netPrice))")
+            }
         }
         .font(.system(size: 18, weight: .medium))
         .foregroundStyle(Color(.label))
@@ -41,7 +44,7 @@ struct ProductInfoPage: View {
     
     var products: some View {
         ForEach(product.images, id: \.self) { image in
-            VStack {
+            VStack(spacing: 8) {
                 Text(image.title)
                     .font(.title3)
                 
@@ -66,6 +69,7 @@ struct ProductInfoPage: View {
                     .stroke(lineWidth: 1)
             }
         }
+        .padding(.bottom)
     }
     
     var navigationBar: some View {
