@@ -19,7 +19,11 @@ struct MainView: View {
                         appCoordinator.viewStack[index]
                     }
                 } else {
-                    Text("No view available")
+                    ProgressView()
+                        .background {
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(Color(.systemBackground))
+                        }
                 }
             }
         }
