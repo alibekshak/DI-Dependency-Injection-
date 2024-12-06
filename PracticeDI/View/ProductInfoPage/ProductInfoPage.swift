@@ -31,7 +31,9 @@ struct ProductInfoPage: View {
     var info: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(product.name)
+                .font(.title2)
             Text(product.description)
+                .font(.system(size: 16, weight: .medium))
             HStack {
                 Text("Price: \(String(format: "%.2f", product.price))")
                 Spacer()
