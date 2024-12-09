@@ -22,6 +22,7 @@ struct ProductInfoPage: View {
             ScrollView(showsIndicators: false) {
                 info
                 products
+                price
             }
         }
         .padding(.horizontal, 12)
@@ -34,6 +35,15 @@ struct ProductInfoPage: View {
                 .font(.title2)
             Text(product.description)
                 .font(.system(size: 16, weight: .medium))
+        }
+        .font(.system(size: 18, weight: .medium))
+        .foregroundStyle(Color(.label))
+    }
+    
+    var price: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Taxes: \(product.taxes) %")
+                .font(.system(size: 20, weight: .semibold))
             HStack {
                 Text("Price: \(String(format: "%.2f", product.price))")
                 Spacer()
@@ -42,6 +52,7 @@ struct ProductInfoPage: View {
         }
         .font(.system(size: 18, weight: .medium))
         .foregroundStyle(Color(.label))
+        .padding(.bottom)
     }
     
     var products: some View {
