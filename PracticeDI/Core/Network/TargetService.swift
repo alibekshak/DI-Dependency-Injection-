@@ -11,34 +11,36 @@ import Moya
 enum TargetService {
     case getCompanyInfo(params: [String: Any])
     case getProducts(params: [String: Any])
+    case getImages(params: [String: Any])
 }
 
 extension TargetService: TargetType {
     
     var baseURL: URL {
-        return URL(string: "https://fakerapi.it/api/")!
+        return URL(string: "https://fakerapi.it/api/v2")!
     }
-    
     
     var path: String {
         switch self {
         case .getCompanyInfo:
-            return "v2/companies"
+            return "/companies"
         case .getProducts:
-            return "v2/products"
+            return "/products"
+        case .getImages:
+            return "/images"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getCompanyInfo, .getProducts:
+        case .getCompanyInfo, .getProducts, .getImages:
             return .get
         }
     }
     
     var task: Task {
         switch self {
-        case .getCompanyInfo(let params), .getProducts(let params):
+        case .getCompanyInfo(let params), .getProducts(let params), .getImages(let params):
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }

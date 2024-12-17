@@ -18,6 +18,7 @@ struct TabViewWithCoordinator<Coordinator: CoordinatorProtocol>: View {
                     currentView
                 } else {
                     Text("No view available")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
         }

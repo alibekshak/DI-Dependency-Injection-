@@ -24,6 +24,7 @@ struct MainView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .foregroundColor(Color(.systemBackground))
                         }
+                        .padding(.bottom, 58)
                 }
             }
         }
