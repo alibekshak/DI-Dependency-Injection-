@@ -17,12 +17,14 @@ struct PracticeDIApp: App {
             if let appCoordinator = DependencyManager.shared.resolve(AppCoordinator.self),
                let coordinatorManager = DependencyManager.shared.resolve(CoordinatorManager.self),
                let homeCoordinator = DependencyManager.shared.resolve(HomeCoordinator.self),
-               let productsCoordinator = DependencyManager.shared.resolve(ProductsCoordinator.self) {
+               let productsCoordinator = DependencyManager.shared.resolve(ProductsCoordinator.self),
+               let imagesCoordinator = DependencyManager.shared.resolve(ImagesCoordinator.self) {
                 MainView()
                     .environmentObject(appCoordinator)
                     .environmentObject(coordinatorManager)
                     .environmentObject(homeCoordinator)
                     .environmentObject(productsCoordinator)
+                    .environmentObject(imagesCoordinator)
             } else {
                 Text("Failed to resolve coordinator")
             }
