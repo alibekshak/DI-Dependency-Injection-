@@ -56,4 +56,26 @@ class NetworkManager {
             }
         }
     }
+    
+    func getImages(quantity: Int, completion: @escaping (Result<ImageResponse, MoyaError>) -> Void) {
+        let params: [String: Any] = [
+            "_quantity": quantity
+        ]
+        
+        provider.request(.getImages(params: params)) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let products = try JSONDecoder().decode(ImageResponse.self, from: response.data)
+                    completion(.success(products))
+                } catch let decodingError {
+                    let moyaError = MoyaError.underlying(decodingError, response)
+                    completion(.failure(moyaError))
+                }
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
+                                        
 }
