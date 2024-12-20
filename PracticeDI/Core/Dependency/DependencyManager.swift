@@ -59,6 +59,14 @@ class DependencyManager {
             
             return ProductsPageViewModel(networkManager: networkManager)
         }
+        
+        container.register(ImagesPageViewModel.self) { resolver in
+            guard let networkManager = resolver.resolve(NetworkManager.self) else {
+                fatalError("Unable to resolve dependencies for MainContentViewModel")
+            }
+            
+            return ImagesPageViewModel(networkManager: networkManager)
+        }
     }
 
     func resolve<Service>(_ serviceType: Service.Type) -> Service? {

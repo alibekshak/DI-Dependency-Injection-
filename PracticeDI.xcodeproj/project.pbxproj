@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1815ABF42D1537B4001B08C7 /* ImagesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ABF32D1537B4001B08C7 /* ImagesPage.swift */; };
+		1815ABF62D153801001B08C7 /* ImagesPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ABF52D153801001B08C7 /* ImagesPageViewModel.swift */; };
 		1840E3C12D113CDB00DF82F0 /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840E3C02D113CDB00DF82F0 /* ImageResponse.swift */; };
 		1840E3C32D11407E00DF82F0 /* ImagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840E3C22D11407E00DF82F0 /* ImagesCoordinator.swift */; };
 		184C12CA2CC6675A00D924D4 /* CustomTubItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C12C92CC6675A00D924D4 /* CustomTubItems.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1815ABF32D1537B4001B08C7 /* ImagesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesPage.swift; sourceTree = "<group>"; };
+		1815ABF52D153801001B08C7 /* ImagesPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesPageViewModel.swift; sourceTree = "<group>"; };
 		1840E3C02D113CDB00DF82F0 /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
 		1840E3C22D11407E00DF82F0 /* ImagesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCoordinator.swift; sourceTree = "<group>"; };
 		184C12C92CC6675A00D924D4 /* CustomTubItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTubItems.swift; sourceTree = "<group>"; };
@@ -105,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1815ABF22D153790001B08C7 /* ImagesPage */ = {
+			isa = PBXGroup;
+			children = (
+				1815ABF32D1537B4001B08C7 /* ImagesPage.swift */,
+			);
+			path = ImagesPage;
+			sourceTree = "<group>";
+		};
 		184C12C72CC6672000D924D4 /* MainTabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +277,7 @@
 		18DF13642CB3B9A600FDB064 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1815ABF22D153790001B08C7 /* ImagesPage */,
 				18C481202CE7102300C731C3 /* ProductInfoPage */,
 				184C12DE2CC8F25300D924D4 /* ReusedView */,
 				184C12D82CC76B7000D924D4 /* ProductsPage */,
@@ -282,6 +295,7 @@
 			children = (
 				18C25CE32CBBE93900FF4D82 /* MainContentViewModel.swift */,
 				184C12F02CD391FF00D924D4 /* ProductsPageViewModel.swift */,
+				1815ABF52D153801001B08C7 /* ImagesPageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -444,10 +458,12 @@
 				18DF13752CB3BDB100FDB064 /* LaunchScreen.swift in Sources */,
 				18C25CE42CBBE93900FF4D82 /* MainContentViewModel.swift in Sources */,
 				1840E3C32D11407E00DF82F0 /* ImagesCoordinator.swift in Sources */,
+				1815ABF62D153801001B08C7 /* ImagesPageViewModel.swift in Sources */,
 				184C12EB2CD37ECC00D924D4 /* ProductsResponse.swift in Sources */,
 				18DF137B2CB3D0FB00FDB064 /* TargetService.swift in Sources */,
 				18DF13542CB3B93C00FDB064 /* PracticeDIApp.swift in Sources */,
 				18C25CE62CBBEB8700FF4D82 /* MainContentView.swift in Sources */,
+				1815ABF42D1537B4001B08C7 /* ImagesPage.swift in Sources */,
 				18C481262CEC53BE00C731C3 /* SwipeBackModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

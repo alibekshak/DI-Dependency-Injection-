@@ -11,7 +11,13 @@ import SwiftUI
 class ImagesCoordinator: CoordinatorProtocol {
     @Published var viewStack: [AnyView] = []
     
+    init() {
+        navigateToImagesPage()
+    }
     
+    func navigateToImagesPage() {
+        navigate(to: ImagesPage())
+    }
     
     func navigate<T: View>(to view: T) {
         DispatchQueue.main.async {

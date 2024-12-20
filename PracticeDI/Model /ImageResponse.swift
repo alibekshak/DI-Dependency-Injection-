@@ -13,10 +13,10 @@ struct ImageResponse: Codable, Hashable {
     let locale: String
     let seed: String?
     let total: Int
-    let data: [imageData]
+    let data: [ImageData]
 }
 
-struct imageData: Codable, Hashable {
+struct ImageData: Codable, Hashable {
     let title: String
     let description: String
     let url: String
