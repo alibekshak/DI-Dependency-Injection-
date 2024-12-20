@@ -19,13 +19,32 @@ struct ImagesPage: View {
     
     var body: some View {
         VStack(spacing: .zero) {
-            ForEach(viewModel.imageData, id: \.self) { imageInfo in
-                Text(imageInfo.title)
+            if viewModel.isLoading {
+                loadingView
+            } else {
+                ScrollView(showsIndicators: false) {
+                    ForEach(viewModel.imageData, id: \.self) { imageInfo in
+                        Text(imageInfo.title)
+                            .font(.title)
+                        Text(imageInfo.description)
+                            .font(.callout)
+                    }
+                }
             }
         }
+        .padding(.horizontal, 12)
+        .background(Color(.systemGray6))
         .onAppear {
             viewModel.getImageData()
         }
+    }
+    
+    var loadingView: some View {
+        VStack {
+            ProgressView()
+                .foregroundStyle(Color(uiColor: .label))
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
     }
 }
 
