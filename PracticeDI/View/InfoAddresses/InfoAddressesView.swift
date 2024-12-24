@@ -13,8 +13,6 @@ struct InfoAddressesView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @State var isQuestionmarkPressed: Bool = false
-    
     var info: UserData
     
     var body: some View {
@@ -30,10 +28,6 @@ struct InfoAddressesView: View {
         }
         .navigationBarBackButtonHidden()
         .padding(.horizontal, 12)
-        .sheet(isPresented: $isQuestionmarkPressed) {
-            ContactInfo(contact: info.contact)
-                .presentationDetents([.medium])
-        }
         .enableSwipeBack(coordinator: HomeCoordinator.self)
     }
     
@@ -73,12 +67,11 @@ struct InfoAddressesView: View {
             
             Button {
                 withAnimation {
-                    isQuestionmarkPressed.toggle()
+                    coordinator.navigateToContactInfo(contact: info.contact)
                 }
             } label: {
                 Image(systemName: "questionmark")
             }
-            
         }
         .font(.system(size: 20, weight: .bold ,design: .rounded))
         .foregroundStyle(colorScheme == .dark ? Color.white : Color.black)
