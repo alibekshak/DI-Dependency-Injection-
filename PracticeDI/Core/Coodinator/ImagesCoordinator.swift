@@ -27,9 +27,7 @@ class ImagesCoordinator: CoordinatorProtocol {
     
     func navigateBack() {
         if viewStack.count > 1 {
-            withAnimation(.easeOut) {
-                viewStack.removeLast()
-            }
+            viewStack.removeLast()
         }
     }
 }
