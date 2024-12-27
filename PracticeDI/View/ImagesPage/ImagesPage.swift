@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ImagesPage: View {
     
@@ -26,6 +27,14 @@ struct ImagesPage: View {
                     ForEach(viewModel.imageData, id: \.self) { imageInfo in
                         Text(imageInfo.title)
                             .font(.title)
+                        KFImage(URL(string: imageInfo.url))
+                            .placeholder {
+                               ProgressView()
+                            }
+                            .cacheOriginalImage()
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
                         Text(imageInfo.description)
                             .font(.callout)
                     }
