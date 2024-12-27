@@ -23,28 +23,35 @@ struct ImagesPage: View {
             if viewModel.isLoading {
                 loadingView
             } else {
-                ScrollView(showsIndicators: false) {
-                    ForEach(viewModel.imageData, id: \.self) { imageInfo in
-                        Text(imageInfo.title)
-                            .font(.title)
-                        KFImage(URL(string: imageInfo.url))
-                            .placeholder {
-                               ProgressView()
-                            }
-                            .cacheOriginalImage()
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
-                        Text(imageInfo.description)
-                            .font(.callout)
-                    }
-                }
+                imageInfo
             }
         }
         .padding(.horizontal, 12)
         .background(Color(.systemGray6))
         .onAppear {
             viewModel.getImageData()
+        }
+    }
+    
+    var imageInfo: some View {
+        ScrollView(showsIndicators: false) {
+            ForEach(viewModel.imageData, id: \.self) { imageInfo in
+                VStack(spacing: 8) {
+                    Text(imageInfo.title)
+                        .font(.title)
+                    KFImage(URL(string: imageInfo.url))
+                        .placeholder {
+                           ProgressView()
+                        }
+                        .cacheOriginalImage()
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    Text(imageInfo.description)
+                        .font(.callout)
+                }
+                .padding(.vertical, 6)
+            }
         }
     }
     
