@@ -51,7 +51,11 @@ class HomeCoordinator: CoordinatorProtocol {
                let rootViewController = windowScene.windows.first?.rootViewController {
                 
                 if let sheet = hostingController.sheetPresentationController {
-                    sheet.detents = [.medium()]
+                    sheet.detents = [
+                        .custom { context in
+                            return 0.35 * context.maximumDetentValue
+                        }
+                    ]
                 }
                 
                 rootViewController.present(hostingController, animated: true)
