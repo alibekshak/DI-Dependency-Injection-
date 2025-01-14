@@ -16,21 +16,20 @@ struct LaunchScreen: View {
     
     var body: some View {
         ZStack {
-            Color.blue.blur(radius: 35)
+            Color.blue.blur(radius: 34)
             Image(systemName: "photo")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 250, height: 250)
-                .scaleEffect(isAnimating ? 1 : 0.5)
-                .animation(.easeInOut(duration: 1.5), value: isAnimating)
+                .scaleEffect(isAnimating ? 0.8 : 1.1)
+                .animation(.interactiveSpring(duration: 1), value: isAnimating)
         }
         .ignoresSafeArea()
         .onAppear {
             self.isAnimating = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                 withAnimation {
                     appCoordinator.navigateToMainConten()
-                        
                 }
             }
         }
