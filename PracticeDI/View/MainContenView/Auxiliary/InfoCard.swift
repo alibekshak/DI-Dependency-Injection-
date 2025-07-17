@@ -12,6 +12,8 @@ struct InfoCard: View {
     
     var info: UserData
     
+    @State var hasError: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 12) {
@@ -28,6 +30,12 @@ struct InfoCard: View {
         .background(Color.white)
         .cornerRadius(16)
         .foregroundColor(.black)
+        .alert(isPresented: $hasError) {
+            Alert(
+                title: Text("Некорректный URL"),
+                dismissButton: .cancel(Text("Ок"))
+            )
+        }
     }
     
     var image: some View {
@@ -56,7 +64,7 @@ struct InfoCard: View {
             if let website = info.website, let url = URL(string: website) {
                  UIApplication.shared.open(url)
              } else {
-                 print("Некорректный URL")
+                 hasError = true
              }
         } label: {
             Text("Website - \(info.website ?? "No website")")

@@ -41,7 +41,11 @@ struct MainContentView: View {
             ProgressView()
                 .foregroundStyle(Color(uiColor: .label))
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        .frame(
+            maxWidth: .infinity,
+            maxHeight: .infinity,
+            alignment: .center
+        )
     }
     
     var infoCard: some View {
@@ -57,7 +61,7 @@ struct MainContentView: View {
                             }
                     }
                 }
-                .padding(.bottom)
+                .padding(.bottom, 12)
                 .padding(.top, 68)
             }
             
